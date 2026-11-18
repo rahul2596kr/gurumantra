@@ -1,0 +1,2749 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <meta name="theme-color" content="#4f46e5" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+  <meta name="apple-mobile-web-app-title" content="Gurumantra" />
+  <link rel="manifest" href="./manifest.json" />
+  <link rel="icon" type="image/png" href="data:image/png;base64,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" />
+  <link rel="apple-touch-icon" href="./icon-192.png" />
+  <title>Gurumantra Online — Smart Assignment, Live Class & Doubt Chat Portal</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+  <script src="https://meet.jit.si/external_api.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    html, body {
+      font-family: 'Inter', sans-serif;
+      background-color: #f8fafc;
+      overflow-x: hidden;
+      max-width: 100vw;
+      -webkit-tap-highlight-color: transparent;
+    }
+    .fade-in { animation: fadeIn 0.25s ease-out; }
+    @keyframes fadeIn { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: translateY(0); } }
+    ::-webkit-scrollbar { width: 5px; height: 5px; }
+    ::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 9999px; }
+    .no-scrollbar::-webkit-scrollbar { display: none; }
+    .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+  </style>
+</head>
+<body class="text-slate-800 antialiased min-h-screen flex flex-col">
+
+  <!-- TOP NAVIGATION BAR (MOBILE-FIRST RESPONSIVE) -->
+  <header class="bg-white border-b border-slate-200 sticky top-0 z-40 shadow-sm">
+    <div class="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 min-h-[60px] py-2 flex items-center justify-between gap-2">
+      <!-- Brand + Sync Pill -->
+      <div class="flex items-center gap-2 min-w-0">
+        <img src="data:image/png;base64,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" alt="Guru Mantra Logo" class="w-10 h-10 sm:w-11 sm:h-11 shrink-0 rounded-xl object-contain bg-white border border-slate-200 p-0.5 shadow-sm" />
+        <div class="min-w-0 flex flex-col sm:flex-row sm:items-center sm:gap-2">
+          <span class="font-extrabold text-base sm:text-xl tracking-tight text-slate-900 truncate">Gurumantra <span class="text-indigo-600">Online</span></span>
+          <span id="sync-status-badge" class="w-fit text-[10px] sm:text-xs font-semibold px-2 py-0.5 rounded-full bg-amber-50 text-amber-700 border border-amber-200">Local Mode</span>
+        </div>
+      </div>
+
+      <!-- Navigation Actions (Shown when logged in) -->
+      <div id="nav-user-controls" class="hidden flex items-center gap-1.5 sm:gap-3 shrink-0">
+        <button id="btn-open-settings" type="button" onclick="toggleSettingsModal(true)" class="hidden text-xs sm:text-sm font-semibold p-2 sm:px-3 sm:py-2 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-700 transition flex items-center gap-1.5" title="Cloud & AI Settings">
+          <span>⚙️</span> <span class="hidden md:inline">Cloud & AI Settings</span>
+        </button>
+
+        <!-- Compact Mobile User Pill -->
+        <div class="flex items-center gap-2 bg-slate-50 border border-slate-200 px-2 sm:px-3 py-1 sm:py-1.5 rounded-xl max-w-[135px] sm:max-w-[220px]">
+          <div class="relative shrink-0">
+            <div id="user-avatar" class="w-7 h-7 rounded-full bg-indigo-600 text-white text-xs font-bold flex items-center justify-center">RG</div>
+            <span class="absolute -bottom-0.5 -right-0.5 w-2.5 h-2.5 rounded-full bg-emerald-500 ring-2 ring-white" title="Online"></span>
+          </div>
+          <div class="text-left leading-tight min-w-0">
+            <p id="user-display-name" class="text-[11px] sm:text-xs font-bold text-slate-900 truncate">Rahul Prasad Gupta</p>
+            <p id="user-display-role" class="text-[10px] sm:text-[11px] font-medium text-slate-500 truncate">TCH-2026</p>
+          </div>
+        </div>
+
+        <button type="button" onclick="logoutUser()" class="text-[11px] sm:text-sm font-bold px-2.5 sm:px-3 py-2 rounded-xl bg-rose-50 hover:bg-rose-100 text-rose-700 border border-rose-200 transition shrink-0">
+          <span class="sm:hidden">Exit</span>
+          <span class="hidden sm:inline">Sign Out</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- MAIN CONTENT CONTAINER -->
+  <main class="flex-1 max-w-7xl w-full mx-auto px-3 sm:px-6 lg:px-8 py-4 sm:py-8">
+
+    <!-- ==================== 1. LOGIN VIEW ==================== -->
+    <section id="view-login" class="max-w-md mx-auto mt-2 sm:mt-6 fade-in">
+      <!-- Warning if opened on a new device without the Portal Magic Link -->
+      <div id="login-local-warning" class="hidden mb-4 p-3.5 rounded-2xl bg-amber-50 border border-amber-200 text-amber-900 text-xs space-y-1">
+        <p class="font-bold">⚠️ Cloud Sync Not Connected on This Device</p>
+        <p>Open the <strong>Portal Link</strong> shared by your teacher (with <code>#cfg=...</code>) so assignments, PDFs, and cloud accounts load automatically.</p>
+      </div>
+
+      <div class="bg-white rounded-2xl shadow-xl border border-slate-200 overflow-hidden">
+        <div class="bg-gradient-to-r from-indigo-600 to-violet-600 px-5 py-6 text-white text-center">
+          <img src="data:image/png;base64,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" alt="Guru Mantra" class="w-16 h-16 mx-auto mb-2.5 rounded-2xl bg-white p-1 shadow-md object-contain" />
+          <h1 class="text-xl sm:text-2xl font-extrabold tracking-tight">Gurumantra Online</h1>
+          <p class="text-indigo-100 text-xs sm:text-sm mt-1">Assignments, Live Video Classes & Doubt Chat</p>
+        </div>
+
+        <!-- Role Toggle Tabs -->
+        <div class="grid grid-cols-2 border-b border-slate-200 bg-slate-50 p-1.5 gap-1.5">
+          <button id="tab-student-login" type="button" onclick="switchLoginRole('student')" class="py-2.5 text-xs sm:text-sm font-bold rounded-xl bg-white text-indigo-600 shadow-sm border border-slate-200 transition cursor-pointer">
+            🎓 Student Login
+          </button>
+          <button id="tab-teacher-login" type="button" onclick="switchLoginRole('teacher')" class="py-2.5 text-xs sm:text-sm font-bold rounded-xl text-slate-600 hover:text-slate-900 transition cursor-pointer">
+            👨‍🏫 Teacher Login
+          </button>
+        </div>
+
+        <form id="login-form" onsubmit="handleLogin(event)" class="p-5 sm:p-6 space-y-4">
+          <!-- Error Banner -->
+          <div id="login-error" class="hidden p-3.5 rounded-xl bg-rose-50 border border-rose-200 text-rose-700 text-xs font-medium flex items-start gap-2">
+            <span class="text-base leading-none">⚠️</span>
+            <span id="login-error-text">Access Denied: Invalid credentials.</span>
+          </div>
+
+          <div>
+            <label id="label-user-id" class="block text-xs font-bold uppercase tracking-wider text-slate-600 mb-1">Student Roll / ID</label>
+            <input id="input-user-id" type="text" required placeholder="e.g. STU-1001"
+              class="w-full px-3.5 py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 outline-none text-base sm:text-sm font-medium" />
+          </div>
+
+          <div>
+            <label class="block text-xs font-bold uppercase tracking-wider text-slate-600 mb-1">Institutional Email</label>
+            <input id="input-user-email" type="email" required placeholder="e.g. student1@school.edu"
+              class="w-full px-3.5 py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 outline-none text-base sm:text-sm font-medium" />
+          </div>
+
+          <div>
+            <label class="block text-xs font-bold uppercase tracking-wider text-slate-600 mb-1">Password</label>
+            <input id="input-user-password" type="password" required placeholder="••••••••"
+              class="w-full px-3.5 py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 outline-none text-base sm:text-sm font-medium" />
+          </div>
+
+          <button type="submit" class="w-full py-3.5 rounded-xl bg-indigo-600 hover:bg-indigo-700 text-white font-bold text-sm shadow-md shadow-indigo-200 transition cursor-pointer">
+            Sign In to Portal →
+          </button>
+
+          <p class="text-[11px] text-center text-slate-400 pt-1">
+            Enter your assigned Roll/Faculty ID, Email, and Password provided by your instructor.
+          </p>
+        </form>
+      </div>
+    </section>
+
+    <!-- ==================== 2. TEACHER PORTAL VIEW ==================== -->
+    <section id="view-teacher" class="hidden space-y-5 sm:space-y-8 fade-in">
+      <!-- Setup Alert Banner if Firebase or Gemini Key missing -->
+      <div id="setup-warning-banner" class="p-4 rounded-2xl bg-amber-50 border border-amber-200 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+        <div class="flex items-start gap-3">
+          <span class="text-xl">☁️</span>
+          <div>
+            <h3 class="text-sm font-bold text-amber-900">Connect Firebase Cloud Sync & Gemini AI Key</h3>
+            <p class="text-xs text-amber-800 mt-0.5">Add your Firebase Web Config (for real-time sync across all students & teachers) and your Google Gemini API key (for live AI PDF grading) in Settings.</p>
+          </div>
+        </div>
+        <button type="button" onclick="toggleSettingsModal(true)" class="w-full sm:w-auto shrink-0 px-4 py-2.5 rounded-xl bg-amber-600 hover:bg-amber-700 text-white text-xs font-bold shadow-sm transition">
+          Open Cloud & AI Settings
+        </button>
+      </div>
+
+      <!-- Teacher Top Stats & Backup Controls (2-col on mobile, 4-col on desktop) -->
+      <div class="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4">
+        <div class="bg-white p-3.5 sm:p-5 rounded-2xl border border-slate-200 shadow-sm">
+          <p class="text-[10px] sm:text-xs font-bold uppercase tracking-wider text-slate-400">Assignments</p>
+          <p id="stat-assignments" class="text-2xl sm:text-3xl font-extrabold text-slate-900 mt-1">1</p>
+        </div>
+        <div class="bg-white p-3.5 sm:p-5 rounded-2xl border border-slate-200 shadow-sm">
+          <p class="text-[10px] sm:text-xs font-bold uppercase tracking-wider text-slate-400">Submissions</p>
+          <p id="stat-submissions" class="text-2xl sm:text-3xl font-extrabold text-indigo-600 mt-1">0</p>
+        </div>
+        <div class="bg-white p-3.5 sm:p-5 rounded-2xl border border-slate-200 shadow-sm">
+          <div class="flex items-center justify-between gap-1">
+            <p class="text-[10px] sm:text-xs font-bold uppercase tracking-wider text-slate-400">Active Now</p>
+            <span class="inline-flex items-center gap-1 text-[10px] font-bold px-1.5 py-0.5 rounded-full bg-emerald-50 text-emerald-700 border border-emerald-200">
+              <span class="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse"></span> Live
+            </span>
+          </div>
+          <p id="stat-online-count" class="text-2xl sm:text-3xl font-extrabold text-emerald-600 mt-1">1 Online</p>
+          <p id="stat-users-breakdown" class="text-[10px] sm:text-[11px] text-slate-500 mt-0.5 truncate">4 Students • 1 Teacher</p>
+        </div>
+        <div class="bg-white p-3.5 sm:p-5 rounded-2xl border border-slate-200 shadow-sm flex flex-col justify-between">
+          <p class="text-[10px] sm:text-xs font-bold uppercase tracking-wider text-slate-400">Share & Backup</p>
+          <div class="flex gap-1.5 mt-2">
+            <button type="button" onclick="copyStudentMagicLink()" class="flex-1 py-2 px-2 rounded-lg bg-indigo-600 hover:bg-indigo-700 text-white text-[11px] sm:text-xs font-bold transition truncate" title="Copy link with embedded cloud config for students & teachers">
+              🔗 Portal Link
+            </button>
+            <button type="button" onclick="exportClassroomData()" class="py-2 px-2 rounded-lg bg-slate-100 hover:bg-slate-200 text-slate-800 text-[11px] sm:text-xs font-bold transition shrink-0" title="Download backup JSON">
+              ⬇️ JSON
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Teacher Sub-Navigation Tabs (Horizontal Scrollable Pill Bar on Mobile) -->
+      <div class="flex gap-2 overflow-x-auto no-scrollbar border-b border-slate-200 pb-2.5">
+        <button id="subtab-btn-workspace" type="button" onclick="switchTeacherTab('workspace')" class="shrink-0 px-3.5 sm:px-4 py-2.5 rounded-xl text-xs sm:text-sm font-bold bg-indigo-600 text-white shadow-sm transition">
+          📚 Assignments & Grading
+        </button>
+        <button id="subtab-btn-live" type="button" onclick="switchTeacherTab('live')" class="shrink-0 px-3.5 sm:px-4 py-2.5 rounded-xl text-xs sm:text-sm font-bold bg-white text-slate-700 hover:bg-slate-100 border border-slate-200 transition flex items-center gap-1.5">
+          <span>🎥</span> Live Class & Chat
+        </button>
+        <button id="subtab-btn-users" type="button" onclick="switchTeacherTab('users')" class="shrink-0 px-3.5 sm:px-4 py-2.5 rounded-xl text-xs sm:text-sm font-bold bg-white text-slate-700 hover:bg-slate-100 border border-slate-200 transition flex items-center gap-1.5">
+          <span>👥</span> Users & Groups <span id="tab-online-pill" class="text-[10px] sm:text-[11px] font-extrabold px-2 py-0.5 rounded-full bg-emerald-100 text-emerald-800">1 online</span>
+        </button>
+      </div>
+
+      <!-- TAB A: ASSIGNMENTS & AI GRADING -->
+      <div id="teacher-tab-workspace" class="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-8">
+        <!-- Left Column: Create Assignment Form -->
+        <div class="lg:col-span-5 bg-white rounded-2xl border border-slate-200 shadow-sm p-4 sm:p-6 h-fit">
+          <h2 class="text-base sm:text-lg font-extrabold text-slate-900 flex items-center gap-2">
+            <span>📝</span> Post New Assignment
+          </h2>
+          <p class="text-xs text-slate-500 mt-0.5 mb-4">Attach Question Paper & Marking Scheme PDFs directly (up to 700 KB each), or type text.</p>
+
+          <form onsubmit="createAssignment(event)" class="space-y-4">
+            <div>
+              <label class="block text-xs font-bold text-slate-700 mb-1">Assignment Title</label>
+              <input id="assign-title" type="text" required placeholder="e.g. Chemical Reactions & Equations"
+                class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 text-base sm:text-sm focus:ring-2 focus:ring-indigo-500 outline-none" />
+            </div>
+
+            <!-- Target Class/Subject Group Selector -->
+            <div>
+              <label class="block text-xs font-bold text-slate-700 mb-1">Target Student Group (Class / Subject)</label>
+              <select id="assign-group" class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 text-base sm:text-sm font-semibold bg-indigo-50/50 text-indigo-950 focus:ring-2 focus:ring-indigo-500 outline-none">
+                <option value="ALL">🌐 All Students (General / Every Class)</option>
+              </select>
+            </div>
+
+            <div class="grid grid-cols-2 gap-3">
+              <div>
+                <label class="block text-xs font-bold text-slate-700 mb-1">Total Marks</label>
+                <input id="assign-marks" type="number" required value="20" min="1" max="500"
+                  class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 text-base sm:text-sm focus:ring-2 focus:ring-indigo-500 outline-none" />
+              </div>
+              <div>
+                <label class="block text-xs font-bold text-slate-700 mb-1">Due Date</label>
+                <input id="assign-due" type="date" required
+                  class="w-full px-3 py-2.5 rounded-xl border border-slate-300 text-base sm:text-sm focus:ring-2 focus:ring-indigo-500 outline-none" />
+              </div>
+            </div>
+
+            <!-- Question Paper PDF Attachment + Optional Text -->
+            <div class="p-3.5 rounded-xl bg-slate-50 border border-slate-200 space-y-2.5">
+              <div class="flex flex-wrap items-center justify-between gap-2">
+                <label class="block text-xs font-bold text-slate-800">1. Question Paper (PDF or Text)</label>
+                <label class="inline-flex items-center gap-1 text-xs font-bold px-3 py-1.5 rounded-lg bg-indigo-600 hover:bg-indigo-700 text-white cursor-pointer shadow-sm transition">
+                  <span>📎 Attach Question PDF</span>
+                  <input id="assign-question-pdf-input" type="file" accept="application/pdf" onchange="handleTeacherPdfAttach(event, 'question')" class="hidden" />
+                </label>
+              </div>
+              <div id="question-pdf-chip" class="hidden flex items-center justify-between bg-indigo-50 border border-indigo-200 px-3 py-2 rounded-lg text-xs">
+                <span id="question-pdf-chip-label" class="font-bold text-indigo-800 truncate">📄 question_paper.pdf</span>
+                <button type="button" onclick="clearTeacherPdfAttach('question')" class="text-rose-600 hover:text-rose-800 font-extrabold ml-2 shrink-0">Remove</button>
+              </div>
+              <textarea id="assign-questions" rows="3" placeholder="Optional if Question PDF is attached—or type/paste instructions & questions here..."
+                class="w-full px-3 py-2 rounded-xl border border-slate-300 text-base sm:text-xs bg-white focus:ring-2 focus:ring-indigo-500 outline-none"></textarea>
+            </div>
+
+            <!-- Marking Scheme / Rubric PDF Attachment + Optional Text -->
+            <div class="p-3.5 rounded-xl bg-slate-50 border border-slate-200 space-y-2.5">
+              <div class="flex flex-wrap items-center justify-between gap-2">
+                <label class="block text-xs font-bold text-slate-800">2. Marking Scheme / Rubric</label>
+                <label class="inline-flex items-center gap-1 text-xs font-bold px-3 py-1.5 rounded-lg bg-emerald-600 hover:bg-emerald-700 text-white cursor-pointer shadow-sm transition">
+                  <span>📎 Attach Marking PDF</span>
+                  <input id="assign-rubric-pdf-input" type="file" accept="application/pdf" onchange="handleTeacherPdfAttach(event, 'rubric')" class="hidden" />
+                </label>
+              </div>
+              <div id="rubric-pdf-chip" class="hidden flex items-center justify-between bg-emerald-50 border border-emerald-200 px-3 py-2 rounded-lg text-xs">
+                <span id="rubric-pdf-chip-label" class="font-bold text-emerald-800 truncate">📄 marking_scheme.pdf</span>
+                <button type="button" onclick="clearTeacherPdfAttach('rubric')" class="text-rose-600 hover:text-rose-800 font-extrabold ml-2 shrink-0">Remove</button>
+              </div>
+              <textarea id="assign-rubric" rows="3" placeholder="Optional if Marking Scheme PDF is attached—or add extra grading rules for Gemini AI..."
+                class="w-full px-3 py-2 rounded-xl border border-slate-300 text-base sm:text-xs bg-white focus:ring-2 focus:ring-indigo-500 outline-none"></textarea>
+            </div>
+
+            <button id="btn-publish-assign" type="submit" class="w-full py-3.5 rounded-xl bg-indigo-600 hover:bg-indigo-700 text-white font-bold text-sm shadow-md shadow-indigo-200 transition">
+              Publish Assignment to Group
+            </button>
+          </form>
+        </div>
+
+        <!-- Right Column: Posted Assignments & Student Submissions -->
+        <div class="lg:col-span-7 space-y-6">
+          <!-- Posted Assignments List with Group Filter -->
+          <div class="bg-white rounded-2xl border border-slate-200 shadow-sm p-4 sm:p-6">
+            <div class="flex flex-wrap items-center justify-between gap-2 mb-4">
+              <h2 class="text-base sm:text-lg font-extrabold text-slate-900">📚 Posted Assignments</h2>
+              <select id="filter-teacher-group" onchange="renderTeacherDashboard()" class="text-xs font-bold px-3 py-2 rounded-lg border border-slate-300 bg-slate-50 text-slate-700 outline-none">
+                <option value="ALL">Filter: All Groups</option>
+              </select>
+            </div>
+            <div id="teacher-assignments-list" class="space-y-3"></div>
+          </div>
+
+          <!-- Student Submissions & AI Grading Review -->
+          <div class="bg-white rounded-2xl border border-slate-200 shadow-sm p-4 sm:p-6">
+            <div class="mb-4">
+              <h2 class="text-base sm:text-lg font-extrabold text-slate-900">🤖 Student PDF Submissions & AI Grades</h2>
+              <p class="text-xs text-slate-500 mt-0.5">Live updates filtered by student group. View attached PDFs, review AI feedback, and adjust scores anytime.</p>
+            </div>
+            <div id="teacher-submissions-list" class="space-y-4"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- TAB B: LIVE VIDEO CLASS & DOUBT CHAT (TEACHER VIEW) -->
+      <div id="teacher-tab-live" class="hidden grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-8 fade-in">
+        <!-- Left Column: Start / Manage Live Video Class -->
+        <div class="lg:col-span-6 space-y-6">
+          <div class="bg-white rounded-2xl border border-slate-200 shadow-sm p-4 sm:p-6 space-y-4">
+            <div>
+              <h2 class="text-base sm:text-lg font-extrabold text-slate-900 flex items-center gap-2">
+                <span>🎥</span> Live Video Classroom (100% Free)
+              </h2>
+              <p class="text-xs text-slate-500 mt-0.5">Start an interactive class with screen-sharing & audio/video for a specific group or all students.</p>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+              <div>
+                <label class="block text-xs font-bold text-slate-700 mb-1">Class / Subject Group</label>
+                <select id="live-class-group" class="w-full px-3 py-2.5 rounded-xl border border-slate-300 text-base sm:text-xs font-bold bg-indigo-50/50 text-indigo-950 outline-none">
+                  <option value="ALL">🌐 All Students</option>
+                </select>
+              </div>
+              <div>
+                <label class="block text-xs font-bold text-slate-700 mb-1">Topic / Session Title</label>
+                <input id="live-class-topic" type="text" placeholder="e.g. Ch. 1 Doubt Clearing"
+                  class="w-full px-3 py-2.5 rounded-xl border border-slate-300 text-base sm:text-xs focus:ring-2 focus:ring-indigo-500 outline-none" />
+              </div>
+            </div>
+
+            <div>
+              <label class="block text-xs font-bold text-slate-700 mb-1">Optional External Link (Google Meet / Zoom)</label>
+              <input id="live-class-external-url" type="url" placeholder="https://meet.google.com/... (Optional)"
+                class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 text-base sm:text-xs font-mono focus:ring-2 focus:ring-indigo-500 outline-none" />
+            </div>
+
+            <div class="flex flex-col sm:flex-row gap-2 pt-1">
+              <button type="button" onclick="startLiveClassSession()" class="flex-1 py-3 px-4 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-xs sm:text-sm shadow-md shadow-emerald-200 transition">
+                🟢 Go Live & Notify Students
+              </button>
+              <button id="btn-end-live-class" type="button" onclick="endLiveClassSession()" class="hidden py-3 px-4 rounded-xl bg-rose-600 hover:bg-rose-700 text-white font-bold text-xs sm:text-sm transition">
+                ⏹️ End Class
+              </button>
+            </div>
+
+            <!-- Active Live Class Status & Embedded Video Frame -->
+            <div id="teacher-active-live-banner" class="hidden p-3.5 rounded-xl bg-emerald-50 border border-emerald-200 flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+              <div class="text-xs">
+                <p class="font-extrabold text-emerald-900" id="teacher-live-status-text">🔴 LIVE: Class 10 Science</p>
+                <p class="text-emerald-700 mt-0.5">Students in this group can now join from their dashboard.</p>
+              </div>
+              <a id="teacher-live-newtab-link" href="#" target="_blank" class="text-center shrink-0 px-3 py-2 rounded-lg bg-white border border-emerald-300 text-emerald-800 text-xs font-bold hover:bg-emerald-100">
+                Open Fullscreen ↗
+              </a>
+            </div>
+
+            <div id="teacher-jitsi-container" class="hidden rounded-2xl overflow-hidden border border-slate-300 bg-slate-900 h-[340px] sm:h-[430px]"></div>
+          </div>
+        </div>
+
+        <!-- Right Column: Real-Time Doubt & Query Chat -->
+        <div class="lg:col-span-6">
+          <div class="bg-white rounded-2xl border border-slate-200 shadow-sm flex flex-col h-[500px] sm:h-[620px]">
+            <div class="p-4 sm:p-5 border-b border-slate-200 flex flex-wrap items-center justify-between gap-2">
+              <div>
+                <h2 class="text-base sm:text-lg font-extrabold text-slate-900 flex items-center gap-2">
+                  <span>💬</span> Student Queries & Doubt Chat
+                </h2>
+                <p class="text-xs text-slate-500">Reply to student questions in real time.</p>
+              </div>
+              <select id="chat-teacher-group-filter" onchange="renderChatMessages('teacher')" class="text-xs font-bold px-3 py-2 rounded-lg border border-slate-300 bg-slate-50 text-slate-700 outline-none">
+                <option value="ALL">Channel: All Groups</option>
+              </select>
+            </div>
+
+            <!-- Online Students Strip inside Teacher Chat -->
+            <div id="teacher-chat-online-strip" class="px-4 py-2 bg-emerald-50/70 border-b border-emerald-100 flex items-center gap-2 overflow-x-auto no-scrollbar text-[11px]"></div>
+
+            <!-- Chat Messages Feed -->
+            <div id="teacher-chat-feed" class="flex-1 overflow-y-auto p-3.5 sm:p-4 space-y-3 bg-slate-50/60"></div>
+
+            <!-- Teacher Reply Input Box -->
+            <form onsubmit="sendChatMessage(event, 'teacher')" class="p-3 sm:p-4 border-t border-slate-200 bg-white rounded-b-2xl space-y-2">
+              <div class="flex items-center justify-between text-[11px] text-slate-500">
+                <span class="truncate">Replying to: <strong id="teacher-chat-target-label" class="text-indigo-700">All Groups</strong></span>
+                <button type="button" onclick="clearGroupChat()" class="text-rose-500 hover:text-rose-700 font-semibold shrink-0 ml-2">Clear Chat</button>
+              </div>
+              <div class="flex gap-2">
+                <input id="teacher-chat-input" type="text" required placeholder="Type your reply to students..."
+                  class="flex-1 min-w-0 px-3.5 py-2.5 rounded-xl border border-slate-300 text-base sm:text-sm focus:ring-2 focus:ring-indigo-500 outline-none" />
+                <button type="submit" class="px-4 sm:px-5 py-2.5 rounded-xl bg-indigo-600 hover:bg-indigo-700 text-white font-bold text-xs shadow-sm transition shrink-0">
+                  Send
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <!-- TAB C: MANAGE GROUPS, STUDENTS & TEACHERS -->
+      <div id="teacher-tab-users" class="hidden grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-8 fade-in">
+        <!-- Left Column: Create Group + Add User -->
+        <div class="lg:col-span-5 space-y-6">
+          <!-- Card 1: Create Class / Subject Group -->
+          <div class="bg-white rounded-2xl border border-slate-200 shadow-sm p-4 sm:p-6">
+            <h2 class="text-base sm:text-lg font-extrabold text-slate-900 flex items-center gap-2">
+              <span>🏷️</span> Create Class / Subject Group
+            </h2>
+            <p class="text-xs text-slate-500 mt-0.5 mb-4">Organize students into separate batches (e.g. Class 10 Science, Class 9 Maths).</p>
+
+            <form onsubmit="addNewGroup(event)" class="flex gap-2">
+              <input id="new-group-name" type="text" required placeholder="e.g. Class 9 Mathematics"
+                class="flex-1 min-w-0 px-3.5 py-2.5 rounded-xl border border-slate-300 text-base sm:text-sm focus:ring-2 focus:ring-indigo-500 outline-none" />
+              <button type="submit" class="px-4 py-2.5 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-xs shadow-sm transition shrink-0">
+                + Add
+              </button>
+            </form>
+
+            <div id="groups-pills-list" class="flex flex-wrap gap-2 mt-4"></div>
+          </div>
+
+          <!-- Card 2: Add New Student or Teacher Form -->
+          <div class="bg-white rounded-2xl border border-slate-200 shadow-sm p-4 sm:p-6">
+            <h2 class="text-base sm:text-lg font-extrabold text-slate-900 flex items-center gap-2">
+              <span>➕</span> Add New Student or Teacher
+            </h2>
+            <p class="text-xs text-slate-500 mt-0.5 mb-5">Assign students to one or more Class/Subject groups below.</p>
+
+            <form onsubmit="addNewUser(event)" class="space-y-4">
+              <div>
+                <label class="block text-xs font-bold text-slate-700 mb-1">Account Role</label>
+                <select id="new-user-role" onchange="toggleNewUserGroupPicker()" class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 text-base sm:text-sm font-semibold bg-white focus:ring-2 focus:ring-indigo-500 outline-none">
+                  <option value="student">🎓 Student Account</option>
+                  <option value="teacher">👨‍🏫 Teacher / Co-Instructor Account</option>
+                </select>
+              </div>
+
+              <!-- Student Group Multi-Checkbox Picker -->
+              <div id="new-user-groups-container" class="bg-indigo-50/60 p-3.5 rounded-xl border border-indigo-100 space-y-2">
+                <label class="block text-xs font-bold text-indigo-950">Assign to Class / Subject Groups:</label>
+                <div id="new-user-groups-checkboxes" class="grid grid-cols-1 gap-1.5 max-h-36 overflow-y-auto"></div>
+              </div>
+
+              <div>
+                <label class="block text-xs font-bold text-slate-700 mb-1">Full Name</label>
+                <input id="new-user-name" type="text" required placeholder="e.g. Aarav Kumar"
+                  class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 text-base sm:text-sm focus:ring-2 focus:ring-indigo-500 outline-none" />
+              </div>
+
+              <div>
+                <label class="block text-xs font-bold text-slate-700 mb-1">Login ID (Roll Number or Faculty ID)</label>
+                <input id="new-user-id" type="text" required placeholder="e.g. STU-1005 or TCH-2027"
+                  class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 text-base sm:text-sm font-mono uppercase focus:ring-2 focus:ring-indigo-500 outline-none" />
+              </div>
+
+              <div>
+                <label class="block text-xs font-bold text-slate-700 mb-1">Institutional Email</label>
+                <input id="new-user-email" type="email" required placeholder="e.g. student5@school.edu"
+                  class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 text-base sm:text-sm focus:ring-2 focus:ring-indigo-500 outline-none" />
+              </div>
+
+              <div>
+                <label class="block text-xs font-bold text-slate-700 mb-1">Password</label>
+                <input id="new-user-pass" type="text" required placeholder="e.g. Pass@1005"
+                  class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 text-base sm:text-sm font-mono focus:ring-2 focus:ring-indigo-500 outline-none" />
+              </div>
+
+              <button type="submit" class="w-full py-3.5 rounded-xl bg-indigo-600 hover:bg-indigo-700 text-white font-bold text-sm shadow-md shadow-indigo-200 transition">
+                Save & Authorize Account
+              </button>
+            </form>
+          </div>
+        </div>
+
+        <!-- Right Column: Active Directory of Students & Teachers -->
+        <div class="lg:col-span-7 space-y-6">
+          <!-- Students Directory -->
+          <div class="bg-white rounded-2xl border border-slate-200 shadow-sm p-4 sm:p-6">
+            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2.5 mb-4">
+              <div>
+                <h2 class="text-base sm:text-lg font-extrabold text-slate-900">🎓 Authorized Students (<span id="dir-student-count">4</span>)</h2>
+                <p id="dir-student-online-summary" class="text-xs text-emerald-600 font-semibold mt-0.5">0 Online now</p>
+              </div>
+              <div class="grid grid-cols-2 sm:flex items-center gap-2">
+                <select id="filter-directory-status" onchange="renderUsersDirectory()" class="text-xs font-bold px-2.5 py-2 rounded-lg border border-slate-300 bg-slate-50 text-slate-700 outline-none">
+                  <option value="ALL">Status: All</option>
+                  <option value="ONLINE">🟢 Online</option>
+                  <option value="OFFLINE">⚪ Offline</option>
+                </select>
+                <select id="filter-directory-group" onchange="renderUsersDirectory()" class="text-xs font-bold px-2.5 py-2 rounded-lg border border-slate-300 bg-slate-50 text-slate-700 outline-none">
+                  <option value="ALL">All Groups</option>
+                </select>
+              </div>
+            </div>
+            <div id="directory-students-list" class="space-y-3"></div>
+          </div>
+
+          <!-- Teachers Directory -->
+          <div class="bg-white rounded-2xl border border-slate-200 shadow-sm p-4 sm:p-6">
+            <div class="mb-4">
+              <h2 class="text-base sm:text-lg font-extrabold text-slate-900">👨‍🏫 Authorized Teachers & Admin (<span id="dir-teacher-count">1</span>)</h2>
+              <p id="dir-teacher-online-summary" class="text-xs text-emerald-600 font-semibold mt-0.5">1 Online now</p>
+            </div>
+            <div id="directory-teachers-list" class="space-y-2.5"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== 3. STUDENT PORTAL VIEW ==================== -->
+    <section id="view-student" class="hidden space-y-5 sm:space-y-6 fade-in">
+      <!-- Top Student Welcome Banner -->
+      <div class="bg-gradient-to-r from-indigo-600 to-violet-600 rounded-2xl p-5 sm:p-6 text-white shadow-lg flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+        <div>
+          <h1 id="student-welcome-heading" class="text-xl sm:text-2xl font-extrabold">Welcome, Student!</h1>
+          <p class="text-indigo-100 text-xs sm:text-sm mt-1">Submit PDF assignments, join live video classes, and ask doubts directly to your teacher.</p>
+          <div class="flex flex-wrap items-center gap-2 mt-3">
+            <div id="student-enrolled-badges" class="flex flex-wrap gap-1.5"></div>
+            <span id="student-teacher-presence-pill" class="text-[11px] font-bold px-2.5 py-0.5 rounded-full bg-white/15 text-white border border-white/25 flex items-center gap-1.5">
+              <span class="w-2 h-2 rounded-full bg-slate-300"></span> Teacher Status: Checking...
+            </span>
+          </div>
+        </div>
+        <div class="bg-white/15 backdrop-blur-md px-3.5 py-2 rounded-xl border border-white/20 text-xs font-semibold w-fit shrink-0">
+          ID: <span id="student-badge-id" class="font-extrabold">STU-1001</span>
+        </div>
+      </div>
+
+      <!-- Live Class Alert Banner -->
+      <div id="student-live-class-banner" class="hidden p-4 rounded-2xl bg-emerald-600 text-white shadow-lg flex flex-col sm:flex-row sm:items-center justify-between gap-3 fade-in">
+        <div class="flex items-center gap-3">
+          <span class="text-2xl animate-pulse shrink-0">🎥</span>
+          <div>
+            <span class="text-[10px] font-extrabold uppercase tracking-wider bg-white/20 px-2 py-0.5 rounded-full">Live Class In Progress</span>
+            <h3 id="student-live-title" class="text-sm sm:text-base font-extrabold mt-1">Class 10 Science — Live Session</h3>
+            <p id="student-live-host" class="text-xs text-emerald-100">Started by Rahul Prasad Gupta</p>
+          </div>
+        </div>
+        <button type="button" onclick="joinStudentLiveClass()" class="w-full sm:w-auto px-4 py-2.5 rounded-xl bg-white text-emerald-700 hover:bg-emerald-50 font-extrabold text-xs shadow-sm transition shrink-0">
+          Join Video Class Now →
+        </button>
+      </div>
+
+      <!-- Student Sub-Navigation Tabs (Full-width 2-col grid on mobile) -->
+      <div class="grid grid-cols-2 sm:flex gap-2 border-b border-slate-200 pb-3">
+        <button id="stu-subtab-btn-assignments" type="button" onclick="switchStudentTab('assignments')" class="px-3 sm:px-4 py-2.5 rounded-xl text-xs sm:text-sm font-bold bg-indigo-600 text-white shadow-sm transition text-center">
+          📋 Assignments & PDF
+        </button>
+        <button id="stu-subtab-btn-live" type="button" onclick="switchStudentTab('live')" class="px-3 sm:px-4 py-2.5 rounded-xl text-xs sm:text-sm font-bold bg-white text-slate-700 hover:bg-slate-100 border border-slate-200 transition flex items-center justify-center gap-1.5">
+          <span>🎥</span> Live & Doubt Chat
+        </button>
+      </div>
+
+      <!-- STUDENT TAB A: ASSIGNMENTS & PDF UPLOAD -->
+      <div id="student-tab-assignments" class="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-8">
+        <!-- Left: Available Assignments -->
+        <div class="lg:col-span-5 space-y-3">
+          <h2 class="text-base sm:text-lg font-extrabold text-slate-900">📋 Your Group Assignments</h2>
+          <div id="student-assignments-list" class="space-y-2.5"></div>
+        </div>
+
+        <!-- Right: PDF Answer Upload & AI Evaluation Result -->
+        <div class="lg:col-span-7 space-y-6">
+          <div id="student-workspace" class="bg-white rounded-2xl border border-slate-200 shadow-sm p-4 sm:p-6">
+            <div id="selected-assignment-header" class="border-b border-slate-200 pb-4 mb-4">
+              <div class="flex flex-wrap items-center justify-between gap-2">
+                <span class="text-[11px] font-bold uppercase tracking-wider text-indigo-600">Selected Assignment</span>
+                <span id="student-active-group-badge" class="text-[11px] font-bold px-2.5 py-0.5 rounded-full bg-indigo-100 text-indigo-700">Class 10 Science</span>
+              </div>
+              <h2 id="student-active-title" class="text-lg sm:text-xl font-extrabold text-slate-900 mt-1">Select an assignment above</h2>
+              <p id="student-active-meta" class="text-xs text-slate-500 mt-1"></p>
+            </div>
+
+            <!-- Attached Question Paper PDF Banner -->
+            <div id="student-question-pdf-banner" class="hidden mb-4 p-3.5 rounded-xl bg-indigo-50 border border-indigo-200 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+              <div class="flex items-center gap-2.5 min-w-0">
+                <span class="text-2xl shrink-0">📄</span>
+                <div class="min-w-0">
+                  <p id="student-question-pdf-name" class="text-xs font-bold text-indigo-950 truncate">Question_Paper.pdf</p>
+                  <p id="student-question-pdf-status" class="text-[11px] text-indigo-700">Attached Question Paper PDF</p>
+                </div>
+              </div>
+              <div class="grid grid-cols-2 sm:flex items-center gap-2 shrink-0">
+                <button type="button" onclick="previewActiveQuestionPdf()" class="px-3 py-2 rounded-lg bg-white hover:bg-indigo-100 text-indigo-700 border border-indigo-200 text-xs font-bold transition text-center">
+                  👁️ View PDF
+                </button>
+                <button type="button" onclick="downloadActiveQuestionPdf()" class="px-3 py-2 rounded-lg bg-indigo-600 hover:bg-indigo-700 text-white text-xs font-bold transition text-center">
+                  ⬇️ Download
+                </button>
+              </div>
+            </div>
+
+            <div id="student-questions-text-box" class="bg-slate-50 rounded-xl p-3.5 sm:p-4 border border-slate-200 mb-5">
+              <h3 class="text-[11px] font-bold uppercase tracking-wider text-slate-500 mb-2">Questions / Instructions</h3>
+              <pre id="student-active-questions" class="whitespace-pre-wrap font-sans text-xs sm:text-sm text-slate-800 leading-relaxed"></pre>
+            </div>
+
+            <!-- PDF Upload Dropzone -->
+            <div class="space-y-4">
+              <label class="block text-sm font-bold text-slate-800">Upload Your Answer Sheet (PDF Only)</label>
+              <div class="border-2 border-dashed border-indigo-300 hover:border-indigo-500 bg-indigo-50/40 rounded-2xl p-5 sm:p-6 text-center transition">
+                <input id="student-pdf-input" type="file" accept="application/pdf" onchange="handleStudentPdfSelect(event)" class="hidden" />
+                <label for="student-pdf-input" class="cursor-pointer flex flex-col items-center">
+                  <span class="text-3xl mb-2">📄</span>
+                  <span class="text-sm font-bold text-indigo-700">Tap to choose your Answer PDF</span>
+                  <span class="text-xs text-slate-500 mt-1">Supports typed, scanned, or handwritten PDFs (under 700 KB)</span>
+                </label>
+              </div>
+
+              <!-- PDF Preview & Extracted Text Box -->
+              <div id="pdf-preview-container" class="hidden grid grid-cols-1 sm:grid-cols-2 gap-4 bg-slate-50 p-3.5 sm:p-4 rounded-xl border border-slate-200">
+                <div>
+                  <p class="text-xs font-bold text-slate-600 mb-2">Page 1 Preview</p>
+                  <canvas id="pdf-preview-canvas" class="w-full rounded-lg border border-slate-300 bg-white shadow-sm"></canvas>
+                </div>
+                <div class="flex flex-col">
+                  <p class="text-xs font-bold text-slate-600 mb-2">Extracted Answer Text (<span id="pdf-page-count">0</span> pages)</p>
+                  <textarea id="pdf-extracted-text" rows="6" class="w-full flex-1 p-2.5 rounded-lg border border-slate-300 text-base sm:text-xs font-mono bg-white" placeholder="Extracted text will appear here..."></textarea>
+                  <p class="text-[11px] text-slate-400 mt-1">Your attached PDF is sent directly to Gemini AI for evaluation.</p>
+                </div>
+              </div>
+
+              <button id="btn-submit-pdf" type="button" onclick="submitAndGradePdf()" disabled
+                class="w-full py-3.5 rounded-xl bg-indigo-600 hover:bg-indigo-700 disabled:bg-slate-300 disabled:cursor-not-allowed text-white font-bold text-sm shadow-md transition flex items-center justify-center gap-2">
+                <span>🚀 Submit PDF & Run AI Grading</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Student Submission History & Feedback -->
+          <div class="bg-white rounded-2xl border border-slate-200 shadow-sm p-4 sm:p-6">
+            <h3 class="text-base sm:text-lg font-extrabold text-slate-900 mb-4">📊 Your Graded Submissions</h3>
+            <div id="student-submissions-list" class="space-y-4"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- STUDENT TAB B: LIVE VIDEO CLASS & DOUBT CHAT -->
+      <div id="student-tab-live" class="hidden grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-8 fade-in">
+        <!-- Left Column: Live Video Classroom -->
+        <div class="lg:col-span-6 space-y-4">
+          <div class="bg-white rounded-2xl border border-slate-200 shadow-sm p-4 sm:p-6 space-y-4">
+            <div class="flex items-center justify-between gap-2">
+              <div>
+                <h2 class="text-base sm:text-lg font-extrabold text-slate-900 flex items-center gap-2">
+                  <span>🎥</span> Live Video Class
+                </h2>
+                <p class="text-xs text-slate-500 mt-0.5">Join your teacher's live video session directly inside the app.</p>
+              </div>
+              <button id="btn-leave-student-call" type="button" onclick="leaveStudentLiveClass()" class="hidden px-3 py-1.5 rounded-lg bg-rose-50 text-rose-700 border border-rose-200 text-xs font-bold hover:bg-rose-100 shrink-0">
+                Leave Call
+              </button>
+            </div>
+
+            <div id="student-no-live-box" class="p-6 sm:p-8 rounded-2xl border border-dashed border-slate-300 bg-slate-50 text-center space-y-2">
+              <span class="text-3xl">📡</span>
+              <p class="text-sm font-bold text-slate-700">No live video class is running right now</p>
+              <p class="text-xs text-slate-500">When your teacher starts a live session for your group, a green banner and video room will appear here automatically. You can still post your doubts in the chat below anytime!</p>
+            </div>
+
+            <div id="student-active-call-controls" class="hidden flex flex-wrap items-center justify-between gap-2 bg-emerald-50 border border-emerald-200 p-3 rounded-xl text-xs">
+              <span id="student-call-topic-label" class="font-bold text-emerald-900">Connected to Live Class</span>
+              <a id="student-live-newtab-link" href="#" target="_blank" class="px-3 py-1.5 rounded-lg bg-white border border-emerald-300 text-emerald-800 font-bold hover:bg-emerald-100">
+                Fullscreen ↗
+              </a>
+            </div>
+
+            <div id="student-jitsi-container" class="hidden rounded-2xl overflow-hidden border border-slate-300 bg-slate-900 h-[340px] sm:h-[430px]"></div>
+          </div>
+        </div>
+
+        <!-- Right Column: Student Doubt & Query Chat -->
+        <div class="lg:col-span-6">
+          <div class="bg-white rounded-2xl border border-slate-200 shadow-sm flex flex-col h-[500px] sm:h-[620px]">
+            <div class="p-4 sm:p-5 border-b border-slate-200 flex flex-wrap items-center justify-between gap-2">
+              <div>
+                <h2 class="text-base sm:text-lg font-extrabold text-slate-900 flex items-center gap-2">
+                  <span>💬</span> Ask Your Teacher (Doubt Chat)
+                </h2>
+                <p id="student-chat-teacher-status" class="text-xs text-slate-500">Checking teacher online status...</p>
+              </div>
+              <select id="chat-student-group-select" onchange="renderChatMessages('student')" class="text-xs font-bold px-3 py-2 rounded-lg border border-slate-300 bg-indigo-50 text-indigo-900 outline-none"></select>
+            </div>
+
+            <!-- Chat Messages Feed -->
+            <div id="student-chat-feed" class="flex-1 overflow-y-auto p-3.5 sm:p-4 space-y-3 bg-slate-50/60"></div>
+
+            <!-- Student Query Input Box -->
+            <form onsubmit="sendChatMessage(event, 'student')" class="p-3 sm:p-4 border-t border-slate-200 bg-white rounded-b-2xl space-y-2">
+              <div class="flex gap-2">
+                <input id="student-chat-input" type="text" required placeholder="Type your question or doubt..."
+                  class="flex-1 min-w-0 px-3.5 py-2.5 rounded-xl border border-slate-300 text-base sm:text-sm focus:ring-2 focus:ring-indigo-500 outline-none" />
+                <button type="submit" class="px-4 sm:px-5 py-2.5 rounded-xl bg-indigo-600 hover:bg-indigo-700 text-white font-bold text-xs shadow-sm transition shrink-0">
+                  Send
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ==================== PDF VIEWER MODAL ==================== -->
+  <div id="pdf-viewer-modal" class="hidden fixed inset-0 z-50 bg-slate-900/75 backdrop-blur-sm flex items-center justify-center p-2 sm:p-4">
+    <div class="bg-white rounded-2xl max-w-4xl w-full h-[90vh] sm:h-[85vh] flex flex-col shadow-2xl border border-slate-200 overflow-hidden fade-in">
+      <div class="flex items-center justify-between px-4 sm:px-5 py-3 border-b border-slate-200 bg-slate-50 gap-2">
+        <h3 id="pdf-viewer-title" class="text-xs sm:text-sm font-extrabold text-slate-900 truncate">Document Preview</h3>
+        <button type="button" onclick="closePdfViewerModal()" class="px-3 py-1.5 rounded-lg bg-slate-200 hover:bg-slate-300 text-slate-800 text-xs font-bold shrink-0">Close &times;</button>
+      </div>
+      <div id="pdf-viewer-loading" class="hidden p-8 text-center text-sm font-bold text-indigo-700">⏳ Downloading PDF from cloud...</div>
+      <iframe id="pdf-viewer-frame" class="w-full flex-1 bg-slate-100" src=""></iframe>
+    </div>
+  </div>
+
+  <!-- ==================== EDIT USER DETAILS & GROUPS MODAL (ADMIN) ==================== -->
+  <div id="edit-user-modal" class="hidden fixed inset-0 z-50 bg-slate-900/60 backdrop-blur-sm flex items-center justify-center p-3 sm:p-4 overflow-y-auto">
+    <div class="bg-white rounded-2xl max-w-md w-full p-5 sm:p-6 shadow-2xl border border-slate-200 space-y-4 fade-in my-auto">
+      <div class="flex items-center justify-between border-b border-slate-100 pb-3">
+        <div>
+          <h3 id="edit-user-modal-title" class="text-base font-extrabold text-slate-900">✏️ Edit Account Details</h3>
+          <p id="edit-user-id-badge" class="text-xs font-mono font-bold text-indigo-600 mt-0.5">ID: STU-1001</p>
+        </div>
+        <button type="button" onclick="closeEditUserModal()" class="text-slate-400 hover:text-slate-700 text-2xl font-bold leading-none px-1">&times;</button>
+      </div>
+
+      <form onsubmit="saveUserDetailsEdit(event)" class="space-y-3.5">
+        <div>
+          <label class="block text-xs font-bold text-slate-700 mb-1">Full Name</label>
+          <input id="edit-user-name" type="text" required
+            class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 text-base sm:text-sm focus:ring-2 focus:ring-indigo-500 outline-none" />
+        </div>
+
+        <div>
+          <label class="block text-xs font-bold text-slate-700 mb-1">Institutional Email</label>
+          <input id="edit-user-email" type="email" required
+            class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 text-base sm:text-sm focus:ring-2 focus:ring-indigo-500 outline-none" />
+        </div>
+
+        <div>
+          <label class="block text-xs font-bold text-slate-700 mb-1">Password</label>
+          <input id="edit-user-pass" type="text" required
+            class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 text-base sm:text-sm font-mono focus:ring-2 focus:ring-indigo-500 outline-none" />
+        </div>
+
+        <!-- Group Checkboxes (Shown only when editing a student) -->
+        <div id="edit-user-groups-section" class="space-y-1.5 pt-1">
+          <label class="block text-xs font-bold text-slate-700">Enrolled Class / Subject Groups</label>
+          <div id="edit-user-groups-checkboxes" class="space-y-1.5 max-h-40 overflow-y-auto p-2.5 rounded-xl bg-slate-50 border border-slate-200"></div>
+        </div>
+
+        <div class="flex justify-end gap-2 pt-3 border-t border-slate-100">
+          <button type="button" onclick="closeEditUserModal()" class="px-4 py-2.5 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-700 text-xs font-bold">Cancel</button>
+          <button type="submit" class="px-5 py-2.5 rounded-xl bg-indigo-600 hover:bg-indigo-700 text-white text-xs font-bold shadow-sm">Save Changes</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- ==================== SETTINGS MODAL (FIREBASE & GEMINI API KEY) ==================== -->
+  <div id="settings-modal" class="hidden fixed inset-0 z-50 bg-slate-900/60 backdrop-blur-sm flex items-center justify-center p-3 sm:p-4 overflow-y-auto">
+    <div class="bg-white rounded-2xl max-w-xl w-full p-5 sm:p-6 shadow-2xl border border-slate-200 space-y-4 fade-in my-auto">
+      <div class="flex items-center justify-between border-b border-slate-100 pb-3">
+        <h3 class="text-base sm:text-lg font-extrabold text-slate-900">⚙️ Cloud Sync & Gemini AI Settings</h3>
+        <button type="button" onclick="toggleSettingsModal(false)" class="text-slate-400 hover:text-slate-700 text-2xl font-bold leading-none px-1">&times;</button>
+      </div>
+
+      <!-- Gemini API Key -->
+      <div class="space-y-2">
+        <label class="block text-xs font-bold uppercase tracking-wider text-slate-700">1. Google Gemini API Key (For Live AI PDF Grading)</label>
+        <input id="input-gemini-key" type="password" placeholder="AIzaSy..."
+          class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 text-base sm:text-sm font-mono focus:ring-2 focus:ring-indigo-500 outline-none" />
+        <p class="text-xs text-slate-500">
+          Get a free key from <a href="https://aistudio.google.com/app/apikey" target="_blank" class="text-indigo-600 font-semibold underline">Google AI Studio</a>.
+        </p>
+      </div>
+
+      <!-- Firebase Web Config JSON -->
+      <div class="space-y-2 pt-2 border-t border-slate-100">
+        <label class="block text-xs font-bold uppercase tracking-wider text-slate-700">2. Firebase Firestore Config (For Multi-Device Live Sync)</label>
+        <textarea id="input-firebase-config" rows="5" placeholder='{
+  "apiKey": "AIzaSy...",
+  "authDomain": "your-project.firebaseapp.com",
+  "projectId": "your-project-id",
+  "storageBucket": "your-project.appspot.com",
+  "messagingSenderId": "123456789",
+  "appId": "1:123456789:web:abcdef"
+}'
+          class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 text-xs font-mono focus:ring-2 focus:ring-indigo-500 outline-none"></textarea>
+      </div>
+
+      <div class="flex justify-end gap-2 pt-2 border-t border-slate-100">
+        <button type="button" onclick="toggleSettingsModal(false)" class="px-4 py-2.5 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-700 text-xs font-bold">Cancel</button>
+        <button type="button" onclick="saveSettings()" class="px-5 py-2.5 rounded-xl bg-indigo-600 hover:bg-indigo-700 text-white text-xs font-bold shadow-sm">Save & Connect Cloud</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==================== CORE UI SCRIPT ==================== -->
+  <script>
+    if (window.pdfjsLib) {
+      pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js';
+    }
+
+    const ONLINE_TIMEOUT_MS = 90000;
+
+    const DEFAULT_GROUPS = [
+      { id: 'grp-10-sci', name: 'Class 10 Science' },
+      { id: 'grp-10-math', name: 'Class 10 Mathematics' },
+      { id: 'grp-9-sci', name: 'Class 9 Science' },
+      { id: 'grp-9-math', name: 'Class 9 Mathematics' }
+    ];
+
+    const DEFAULT_USERS = [
+      { id: 'TCH-2026', email: 'rahul.gupta@school.edu', pass: 'Teacher@2026', name: 'Rahul Prasad Gupta', role: 'teacher', groups: [] },
+      { id: 'STU-1001', email: 'student1@school.edu', pass: 'Pass@1001', name: 'Shiv (Student 1)', role: 'student', groups: ['Class 10 Science', 'Class 10 Mathematics'] },
+      { id: 'STU-1002', email: 'student2@school.edu', pass: 'Pass@1002', name: 'Student 2', role: 'student', groups: ['Class 10 Science'] },
+      { id: 'STU-1003', email: 'student3@school.edu', pass: 'Pass@1003', name: 'Student 3', role: 'student', groups: ['Class 9 Science'] },
+      { id: 'STU-1004', email: 'student4@school.edu', pass: 'Pass@1004', name: 'Student 4', role: 'student', groups: ['Class 9 Mathematics'] }
+    ];
+
+    const DEFAULT_ASSIGNMENTS = [
+      {
+        id: 'assign-101',
+        title: 'Light — Reflection & Refraction',
+        targetGroup: 'Class 10 Science',
+        totalMarks: 20,
+        dueDate: '2026-11-25',
+        createdAt: 1700000000000,
+        questions: "Q1. State the two laws of reflection of light. (5 Marks)\nQ2. Define refractive index of a medium. If the speed of light in vacuum is 3 x 10^8 m/s and in glass is 2 x 10^8 m/s, calculate the refractive index of glass. (5 Marks)\nQ3. Draw/describe the image formed by a concave mirror when an object is placed between the pole (P) and principal focus (F). (5 Marks)\nQ4. Why do doctors use a concave mirror as a head mirror to examine eyes, ears, and throat? (5 Marks)",
+        rubric: "Q1 (5m): Angle of incidence equals angle of reflection (2.5m); incident ray, reflected ray, and normal at the point of incidence all lie in the same plane (2.5m).\nQ2 (5m): Ratio of speed of light in vacuum to speed of light in medium (2m); n = c/v = (3x10^8)/(2x10^8) = 1.5 (3m).\nQ3 (5m): Virtual, erect, magnified image formed behind the mirror (5m).\nQ4 (5m): Concave mirror converges parallel beam of light onto a small area to illuminate it brightly (5m).",
+        questionPdfName: '',
+        questionPdfFileId: '',
+        questionPdfBase64: '',
+        rubricPdfName: '',
+        rubricPdfFileId: '',
+        rubricPdfBase64: ''
+      }
+    ];
+
+    // Load shared config from URL hash if present
+    (function loadConfigFromUrlHash() {
+      try {
+        if (window.location.hash && window.location.hash.startsWith('#cfg=')) {
+          const encoded = window.location.hash.slice(5);
+          const decoded = JSON.parse(atob(decodeURIComponent(encoded)));
+          if (decoded.fb) localStorage.setItem('gf_firebase_config', JSON.stringify(decoded.fb));
+          if (decoded.gk) localStorage.setItem('gf_gemini_key', decoded.gk);
+          history.replaceState(null, '', window.location.pathname + window.location.search);
+        }
+      } catch (e) {
+        console.warn('Could not parse shared config from URL:', e);
+      }
+    })();
+
+    // Global App State
+    window.appState = {
+      currentUser: JSON.parse(sessionStorage.getItem('gf_user') || 'null'),
+      loginRole: 'student',
+      groups: JSON.parse(localStorage.getItem('gf_groups') || 'null') || DEFAULT_GROUPS,
+      users: JSON.parse(localStorage.getItem('gf_users') || 'null') || DEFAULT_USERS,
+      assignments: JSON.parse(localStorage.getItem('gf_assignments') || 'null') || DEFAULT_ASSIGNMENTS,
+      submissions: JSON.parse(localStorage.getItem('gf_submissions') || '[]'),
+      chatMessages: JSON.parse(localStorage.getItem('gf_chat') || '[]'),
+      liveSession: JSON.parse(localStorage.getItem('gf_live_session') || 'null'),
+      presenceMap: JSON.parse(localStorage.getItem('gf_presence') || '{}'),
+      fileCache: {},
+      geminiApiKey: localStorage.getItem('gf_gemini_key') || '',
+      firebaseConfigStr: localStorage.getItem('gf_firebase_config') || '',
+      selectedAssignmentId: null,
+      currentPdfFileName: '',
+      currentStudentPdfBase64: '',
+      pendingQuestionPdf: { name: '', base64: '' },
+      pendingRubricPdf: { name: '', base64: '' },
+      editingUserId: null,
+      jitsiApiInstance: null,
+      presenceTimerId: null,
+      presenceTickId: null,
+      cloudSaveDoc: null,
+      cloudGetDoc: null,
+      cloudDeleteDoc: null,
+      isCloudConnected: false
+    };
+
+    window.appState.users = window.appState.users.map(u => ({ ...u, groups: Array.isArray(u.groups) ? u.groups : [] }));
+    window.appState.assignments = window.appState.assignments.map(a => ({ ...a, targetGroup: a.targetGroup || 'ALL' }));
+    window.appState.selectedAssignmentId = window.appState.assignments[0]?.id || null;
+
+    function escapeHtml(str) {
+      return String(str).replace(/[&<>"']/g, m => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[m]));
+    }
+
+    function fileToBase64(file) {
+      return new Promise((resolve, reject) => {
+        const reader = new FileReader();
+        reader.onload = () => {
+          const result = reader.result || '';
+          const base64 = result.includes(',') ? result.split(',')[1] : result;
+          resolve(base64);
+        };
+        reader.onerror = reject;
+        reader.readAsDataURL(file);
+      });
+    }
+
+    // ==================== REAL-TIME ONLINE / ACTIVE PRESENCE SYSTEM ====================
+    function isUserOnline(userId) {
+      if (window.appState.currentUser && window.appState.currentUser.id === userId) return true;
+      const p = window.appState.presenceMap[userId];
+      if (!p || !p.online || !p.lastSeen) return false;
+      return (Date.now() - Number(p.lastSeen)) < ONLINE_TIMEOUT_MS;
+    }
+
+    function formatLastSeen(userId) {
+      if (isUserOnline(userId)) return 'Online now';
+      const p = window.appState.presenceMap[userId];
+      if (!p || !p.lastSeen) return 'Offline';
+      const diffSec = Math.floor((Date.now() - Number(p.lastSeen)) / 1000);
+      if (diffSec < 60) return 'Active just now';
+      const diffMin = Math.floor(diffSec / 60);
+      if (diffMin < 60) return `Last seen ${diffMin}m ago`;
+      const diffHr = Math.floor(diffMin / 60);
+      if (diffHr < 24) return `Last seen ${diffHr}h ago`;
+      return `Last seen ${new Date(Number(p.lastSeen)).toLocaleDateString()}`;
+    }
+
+    async function publishUserPresence(online = true) {
+      const user = window.appState.currentUser;
+      if (!user) return;
+      const payload = {
+        userId: user.id,
+        name: user.name,
+        role: user.role,
+        online: online,
+        lastSeen: Date.now()
+      };
+      window.appState.presenceMap[user.id] = payload;
+      localStorage.setItem('gf_presence', JSON.stringify(window.appState.presenceMap));
+
+      if (window.appState.isCloudConnected && window.appState.cloudSaveDoc) {
+        try {
+          await window.appState.cloudSaveDoc('gurumantra_presence', user.id, payload);
+        } catch (e) {
+          console.warn('Presence heartbeat skipped:', e);
+        }
+      }
+      updatePresenceDisplays();
+    }
+
+    function startPresenceTracking() {
+      stopPresenceTracking();
+      publishUserPresence(true);
+      window.appState.presenceTimerId = setInterval(() => {
+        if (window.appState.currentUser && document.visibilityState === 'visible') {
+          publishUserPresence(true);
+        }
+      }, 30000);
+
+      window.appState.presenceTickId = setInterval(() => {
+        updatePresenceDisplays();
+      }, 15000);
+    }
+
+    function stopPresenceTracking() {
+      if (window.appState.presenceTimerId) {
+        clearInterval(window.appState.presenceTimerId);
+        window.appState.presenceTimerId = null;
+      }
+      if (window.appState.presenceTickId) {
+        clearInterval(window.appState.presenceTickId);
+        window.appState.presenceTickId = null;
+      }
+    }
+
+    document.addEventListener('visibilitychange', () => {
+      if (window.appState.currentUser && document.visibilityState === 'visible') {
+        publishUserPresence(true);
+      }
+    });
+
+    window.addEventListener('beforeunload', () => {
+      if (window.appState.currentUser && window.appState.isCloudConnected && window.appState.cloudSaveDoc) {
+        window.appState.cloudSaveDoc('gurumantra_presence', window.appState.currentUser.id, {
+          userId: window.appState.currentUser.id,
+          name: window.appState.currentUser.name,
+          role: window.appState.currentUser.role,
+          online: false,
+          lastSeen: Date.now()
+        });
+      }
+    });
+
+    function updatePresenceDisplays() {
+      const user = window.appState.currentUser;
+      if (!user) return;
+
+      const allUsers = window.appState.users;
+      const onlineStudents = allUsers.filter(u => u.role === 'student' && isUserOnline(u.id));
+      const onlineTeachers = allUsers.filter(u => u.role === 'teacher' && isUserOnline(u.id));
+      const totalOnline = onlineStudents.length + onlineTeachers.length;
+
+      if (user.role === 'teacher') {
+        const statOnlineEl = document.getElementById('stat-online-count');
+        if (statOnlineEl) statOnlineEl.textContent = `${totalOnline} Online`;
+
+        const statBreakdownEl = document.getElementById('stat-users-breakdown');
+        if (statBreakdownEl) {
+          statBreakdownEl.textContent = `${onlineStudents.length} Stu • ${onlineTeachers.length} Tch active`;
+        }
+
+        const tabPill = document.getElementById('tab-online-pill');
+        if (tabPill) tabPill.textContent = `${totalOnline} online`;
+
+        const chatStrip = document.getElementById('teacher-chat-online-strip');
+        if (chatStrip) {
+          if (onlineStudents.length === 0) {
+            chatStrip.innerHTML = '<span class="text-slate-500 font-medium">⚪ No students currently online</span>';
+          } else {
+            chatStrip.innerHTML = '<span class="font-bold text-emerald-800 shrink-0">🟢 Active:</span>' +
+              onlineStudents.map(s => `<span class="shrink-0 px-2 py-0.5 rounded-full bg-emerald-100 text-emerald-900 font-bold">${escapeHtml(s.name)}</span>`).join('');
+          }
+        }
+
+        const usersTab = document.getElementById('teacher-tab-users');
+        if (usersTab && !usersTab.classList.contains('hidden')) {
+          renderUsersDirectory();
+        }
+      } else {
+        const teacherOnline = onlineTeachers.length > 0;
+        const primaryTeacher = onlineTeachers[0] || allUsers.find(u => u.role === 'teacher');
+        const teacherName = primaryTeacher ? primaryTeacher.name : 'Teacher';
+
+        const bannerPill = document.getElementById('student-teacher-presence-pill');
+        if (bannerPill) {
+          if (teacherOnline) {
+            bannerPill.className = 'text-[11px] font-bold px-2.5 py-0.5 rounded-full bg-emerald-500/30 text-white border border-emerald-300/50 flex items-center gap-1.5';
+            bannerPill.innerHTML = `<span class="w-2 h-2 rounded-full bg-emerald-300 animate-pulse"></span> ${escapeHtml(teacherName)}: Online`;
+          } else {
+            const lastSeenStr = primaryTeacher ? formatLastSeen(primaryTeacher.id) : 'Offline';
+            bannerPill.className = 'text-[11px] font-semibold px-2.5 py-0.5 rounded-full bg-white/15 text-indigo-100 border border-white/20 flex items-center gap-1.5';
+            bannerPill.innerHTML = `<span class="w-2 h-2 rounded-full bg-slate-300"></span> ${escapeHtml(teacherName)}: ${escapeHtml(lastSeenStr)}`;
+          }
+        }
+
+        const chatStatus = document.getElementById('student-chat-teacher-status');
+        if (chatStatus) {
+          if (teacherOnline) {
+            chatStatus.innerHTML = `<span class="text-emerald-600 font-bold">🟢 ${escapeHtml(teacherName)} is online now</span>`;
+          } else {
+            const lastSeenStr = primaryTeacher ? formatLastSeen(primaryTeacher.id) : 'Offline';
+            chatStatus.textContent = `⚪ ${teacherName} (${lastSeenStr.toLowerCase()})`;
+          }
+        }
+      }
+    }
+
+    // ==================== DEDICATED CLOUD FILE STORAGE (AVOIDS 1MB DOC LIMIT) ====================
+    async function savePdfToCloudStorage(fileId, fileName, base64Data) {
+      if (!base64Data) return;
+      window.appState.fileCache[fileId] = base64Data;
+      try {
+        localStorage.setItem('gf_file_' + fileId, base64Data);
+      } catch (e) {
+        console.warn('LocalStorage quota full for PDF cache, relying on Firestore cloud:', e);
+      }
+      if (window.appState.isCloudConnected && window.appState.cloudSaveDoc) {
+        await window.appState.cloudSaveDoc('gurumantra_files', fileId, {
+          id: fileId,
+          fileName: fileName || 'document.pdf',
+          base64: base64Data,
+          createdAt: Date.now()
+        });
+      }
+    }
+
+    async function fetchPdfBase64(fileId, fallbackInlineBase64 = '') {
+      if (fallbackInlineBase64) return fallbackInlineBase64;
+      if (!fileId) return '';
+      if (window.appState.fileCache[fileId]) return window.appState.fileCache[fileId];
+      const localCached = localStorage.getItem('gf_file_' + fileId);
+      if (localCached) {
+        window.appState.fileCache[fileId] = localCached;
+        return localCached;
+      }
+      if (window.appState.isCloudConnected && window.appState.cloudGetDoc) {
+        const docData = await window.appState.cloudGetDoc('gurumantra_files', fileId);
+        if (docData && docData.base64) {
+          window.appState.fileCache[fileId] = docData.base64;
+          try { localStorage.setItem('gf_file_' + fileId, docData.base64); } catch (e) {}
+          return docData.base64;
+        }
+      }
+      return '';
+    }
+
+    // ==================== PDF VIEWER & DOWNLOAD HELPERS ====================
+    async function openPdfViewerAsync(title, fileId, fallbackInlineBase64 = '') {
+      document.getElementById('pdf-viewer-title').textContent = title;
+      document.getElementById('pdf-viewer-frame').src = '';
+      document.getElementById('pdf-viewer-loading').classList.remove('hidden');
+      document.getElementById('pdf-viewer-modal').classList.remove('hidden');
+
+      const base64Data = await fetchPdfBase64(fileId, fallbackInlineBase64);
+      document.getElementById('pdf-viewer-loading').classList.add('hidden');
+
+      if (!base64Data) {
+        closePdfViewerModal();
+        alert('Could not retrieve this PDF from the cloud. Make sure this device is connected via the teacher\'s Portal Link (🟢 Live Cloud Sync).');
+        return;
+      }
+      document.getElementById('pdf-viewer-frame').src = `data:application/pdf;base64,${base64Data}`;
+    }
+
+    function closePdfViewerModal() {
+      document.getElementById('pdf-viewer-modal').classList.add('hidden');
+      document.getElementById('pdf-viewer-frame').src = '';
+    }
+
+    async function downloadPdfAsync(fileName, fileId, fallbackInlineBase64 = '') {
+      const base64Data = await fetchPdfBase64(fileId, fallbackInlineBase64);
+      if (!base64Data) {
+        alert('Could not download PDF. Verify that this device shows 🟢 Live Cloud Sync at the top.');
+        return;
+      }
+      const a = document.createElement('a');
+      a.href = `data:application/pdf;base64,${base64Data}`;
+      a.download = fileName || 'document.pdf';
+      a.click();
+    }
+
+    function previewAssignmentPdfById(assignId, kind) {
+      const assign = window.appState.assignments.find(a => a.id === assignId);
+      if (!assign) return;
+      if (kind === 'question') {
+        openPdfViewerAsync(assign.questionPdfName || 'Question_Paper.pdf', assign.questionPdfFileId, assign.questionPdfBase64);
+      } else {
+        openPdfViewerAsync(assign.rubricPdfName || 'Marking_Scheme.pdf', assign.rubricPdfFileId, assign.rubricPdfBase64);
+      }
+    }
+
+    function previewSubmissionPdfById(subId) {
+      const sub = window.appState.submissions.find(s => s.id === subId);
+      if (!sub || (!sub.answerPdfFileId && !sub.answerPdfBase64)) {
+        alert('No PDF file is attached to this submission.');
+        return;
+      }
+      openPdfViewerAsync(`${sub.studentName} — ${sub.fileName}`, sub.answerPdfFileId, sub.answerPdfBase64);
+    }
+
+    function previewActiveQuestionPdf() {
+      const active = window.appState.assignments.find(a => a.id === window.appState.selectedAssignmentId);
+      if (active) {
+        openPdfViewerAsync(active.questionPdfName || 'Question_Paper.pdf', active.questionPdfFileId, active.questionPdfBase64);
+      }
+    }
+
+    function downloadActiveQuestionPdf() {
+      const active = window.appState.assignments.find(a => a.id === window.appState.selectedAssignmentId);
+      if (active) {
+        downloadPdfAsync(active.questionPdfName || 'Question_Paper.pdf', active.questionPdfFileId, active.questionPdfBase64);
+      }
+    }
+
+    // ==================== AUTHENTICATION ====================
+    function switchLoginRole(role) {
+      window.appState.loginRole = role;
+      document.getElementById('login-error').classList.add('hidden');
+      const tabStu = document.getElementById('tab-student-login');
+      const tabTch = document.getElementById('tab-teacher-login');
+      const labelId = document.getElementById('label-user-id');
+      const inputId = document.getElementById('input-user-id');
+      const inputEmail = document.getElementById('input-user-email');
+
+      if (role === 'student') {
+        tabStu.className = 'py-2.5 text-xs sm:text-sm font-bold rounded-xl bg-white text-indigo-600 shadow-sm border border-slate-200 transition cursor-pointer';
+        tabTch.className = 'py-2.5 text-xs sm:text-sm font-bold rounded-xl text-slate-600 hover:text-slate-900 transition cursor-pointer';
+        labelId.textContent = 'Student Roll / ID';
+        inputId.placeholder = 'e.g. STU-1001';
+        inputEmail.placeholder = 'e.g. student1@school.edu';
+      } else {
+        tabTch.className = 'py-2.5 text-xs sm:text-sm font-bold rounded-xl bg-white text-indigo-600 shadow-sm border border-slate-200 transition cursor-pointer';
+        tabStu.className = 'py-2.5 text-xs sm:text-sm font-bold rounded-xl text-slate-600 hover:text-slate-900 transition cursor-pointer';
+        labelId.textContent = 'Faculty / Staff ID';
+        inputId.placeholder = 'e.g. TCH-2026';
+        inputEmail.placeholder = 'e.g. rahul.gupta@school.edu';
+      }
+    }
+
+    function handleLogin(e) {
+      e.preventDefault();
+      const idVal = document.getElementById('input-user-id').value.trim().toUpperCase();
+      const emailVal = document.getElementById('input-user-email').value.trim().toLowerCase();
+      const passVal = document.getElementById('input-user-password').value;
+      const errBox = document.getElementById('login-error');
+      const errText = document.getElementById('login-error-text');
+
+      const matchedUser = window.appState.users.find(
+        u => u.role === window.appState.loginRole && u.id.toUpperCase() === idVal && u.email.toLowerCase() === emailVal && u.pass === passVal
+      );
+
+      if (!matchedUser) {
+        errText.textContent = window.appState.loginRole === 'student'
+          ? 'Access Denied: Invalid Student ID, Institutional Email, or Password. Make sure you opened the Portal Link shared by your teacher.'
+          : 'Access Denied: Invalid Faculty ID, Institutional Email, or Password.';
+        errBox.classList.remove('hidden');
+        return;
+      }
+
+      window.appState.currentUser = matchedUser;
+      errBox.classList.add('hidden');
+      sessionStorage.setItem('gf_user', JSON.stringify(matchedUser));
+      showPortalForUser(matchedUser);
+    }
+
+    function showPortalForUser(user) {
+      document.getElementById('view-login').classList.add('hidden');
+      document.getElementById('nav-user-controls').classList.remove('hidden');
+      document.getElementById('user-display-name').textContent = user.name;
+      document.getElementById('user-display-role').textContent = `${user.id}`;
+      document.getElementById('user-avatar').textContent = user.name.split(' ').map(n => n[0]).join('').slice(0, 2).toUpperCase();
+
+      startPresenceTracking();
+
+      if (user.role === 'teacher') {
+        document.getElementById('view-teacher').classList.remove('hidden');
+        document.getElementById('view-student').classList.add('hidden');
+        document.getElementById('btn-open-settings').classList.remove('hidden');
+        populateAllGroupDropdowns();
+        renderTeacherDashboard();
+        renderGroupsManager();
+        renderUsersDirectory();
+        renderTeacherLiveStatus();
+        renderChatMessages('teacher');
+        suggestNextUserId();
+      } else {
+        document.getElementById('view-student').classList.remove('hidden');
+        document.getElementById('view-teacher').classList.add('hidden');
+        document.getElementById('btn-open-settings').classList.add('hidden');
+        document.getElementById('student-welcome-heading').textContent = `Welcome, ${user.name}!`;
+        document.getElementById('student-badge-id').textContent = user.id;
+        renderStudentPortal();
+        renderStudentLiveBanner();
+        renderChatMessages('student');
+      }
+      updatePresenceDisplays();
+    }
+
+    async function logoutUser() {
+      await publishUserPresence(false);
+      stopPresenceTracking();
+
+      if (window.appState.jitsiApiInstance) {
+        try { window.appState.jitsiApiInstance.dispose(); } catch (e) {}
+        window.appState.jitsiApiInstance = null;
+      }
+      window.appState.currentUser = null;
+      sessionStorage.removeItem('gf_user');
+      document.getElementById('nav-user-controls').classList.add('hidden');
+      document.getElementById('view-teacher').classList.add('hidden');
+      document.getElementById('view-student').classList.add('hidden');
+      document.getElementById('view-login').classList.remove('hidden');
+      document.getElementById('input-user-password').value = '';
+    }
+
+    // ==================== LIVE VIDEO CLASSROOM ====================
+    function mountJitsiMeeting(containerId, roomName, displayName) {
+      const container = document.getElementById(containerId);
+      if (!container) return;
+      container.innerHTML = '';
+      container.classList.remove('hidden');
+
+      if (window.appState.jitsiApiInstance) {
+        try { window.appState.jitsiApiInstance.dispose(); } catch (e) {}
+        window.appState.jitsiApiInstance = null;
+      }
+
+      if (window.JitsiMeetExternalAPI) {
+        window.appState.jitsiApiInstance = new JitsiMeetExternalAPI('meet.jit.si', {
+          roomName: roomName,
+          width: '100%',
+          height: '100%',
+          parentNode: container,
+          userInfo: { displayName: displayName },
+          configOverwrite: {
+            prejoinPageEnabled: false,
+            startWithAudioMuted: false,
+            startWithVideoMuted: false
+          }
+        });
+      } else {
+        container.innerHTML = `<iframe src="https://meet.jit.si/${encodeURIComponent(roomName)}" allow="camera; microphone; fullscreen; display-capture; autoplay" class="w-full h-full border-0"></iframe>`;
+      }
+    }
+
+    async function startLiveClassSession() {
+      const targetGroup = document.getElementById('live-class-group').value;
+      const topic = document.getElementById('live-class-topic').value.trim() || 'Live Interactive Class';
+      const externalUrl = document.getElementById('live-class-external-url').value.trim();
+
+      const slug = targetGroup.replace(/[^a-zA-Z0-9]/g, '') || 'General';
+      const roomName = `GurumantraOnline_${slug}_${Date.now().toString().slice(-5)}`;
+      const joinUrl = externalUrl || `https://meet.jit.si/${roomName}`;
+
+      const sessionObj = {
+        id: 'current_live',
+        active: true,
+        targetGroup,
+        topic,
+        roomName,
+        joinUrl,
+        isExternal: Boolean(externalUrl),
+        hostName: window.appState.currentUser.name,
+        startedAt: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })
+      };
+
+      window.appState.liveSession = sessionObj;
+      localStorage.setItem('gf_live_session', JSON.stringify(sessionObj));
+
+      if (window.appState.isCloudConnected && window.appState.cloudSaveDoc) {
+        await window.appState.cloudSaveDoc('gurumantra_live', 'current_live', sessionObj);
+      }
+
+      renderTeacherLiveStatus();
+      if (!externalUrl) {
+        mountJitsiMeeting('teacher-jitsi-container', roomName, `${window.appState.currentUser.name} (Teacher)`);
+      } else {
+        window.open(externalUrl, '_blank');
+      }
+    }
+
+    async function endLiveClassSession() {
+      if (window.appState.jitsiApiInstance) {
+        try { window.appState.jitsiApiInstance.dispose(); } catch (e) {}
+        window.appState.jitsiApiInstance = null;
+      }
+      document.getElementById('teacher-jitsi-container').innerHTML = '';
+      document.getElementById('teacher-jitsi-container').classList.add('hidden');
+
+      window.appState.liveSession = null;
+      localStorage.removeItem('gf_live_session');
+
+      if (window.appState.isCloudConnected && window.appState.cloudDeleteDoc) {
+        await window.appState.cloudDeleteDoc('gurumantra_live', 'current_live');
+      }
+      renderTeacherLiveStatus();
+    }
+
+    function renderTeacherLiveStatus() {
+      const live = window.appState.liveSession;
+      const banner = document.getElementById('teacher-active-live-banner');
+      const endBtn = document.getElementById('btn-end-live-class');
+      if (!banner || !endBtn) return;
+
+      if (live && live.active) {
+        banner.classList.remove('hidden');
+        endBtn.classList.remove('hidden');
+        const grpLabel = live.targetGroup === 'ALL' ? 'All Students' : live.targetGroup;
+        document.getElementById('teacher-live-status-text').textContent = `🔴 LIVE (${grpLabel}): ${live.topic}`;
+        document.getElementById('teacher-live-newtab-link').href = live.joinUrl;
+      } else {
+        banner.classList.add('hidden');
+        endBtn.classList.add('hidden');
+      }
+    }
+
+    function renderStudentLiveBanner() {
+      const live = window.appState.liveSession;
+      const banner = document.getElementById('student-live-class-banner');
+      const noLiveBox = document.getElementById('student-no-live-box');
+      if (!banner || !window.appState.currentUser) return;
+
+      const myGroups = window.appState.currentUser.groups || [];
+      const isForMe = live && live.active && (!live.targetGroup || live.targetGroup === 'ALL' || myGroups.includes(live.targetGroup));
+
+      if (isForMe) {
+        banner.classList.remove('hidden');
+        const grpLabel = live.targetGroup === 'ALL' ? 'All Students' : live.targetGroup;
+        document.getElementById('student-live-title').textContent = `${live.topic} (${grpLabel})`;
+        document.getElementById('student-live-host').textContent = `Started by ${live.hostName} at ${live.startedAt}`;
+        if (noLiveBox) noLiveBox.classList.add('hidden');
+      } else {
+        banner.classList.add('hidden');
+        if (noLiveBox && !window.appState.jitsiApiInstance) noLiveBox.classList.remove('hidden');
+      }
+    }
+
+    function joinStudentLiveClass() {
+      const live = window.appState.liveSession;
+      if (!live || !live.active) return;
+
+      switchStudentTab('live');
+      if (live.isExternal) {
+        window.open(live.joinUrl, '_blank');
+        return;
+      }
+
+      document.getElementById('student-no-live-box').classList.add('hidden');
+      document.getElementById('student-active-call-controls').classList.remove('hidden');
+      document.getElementById('btn-leave-student-call').classList.remove('hidden');
+      document.getElementById('student-call-topic-label').textContent = `🔴 Connected: ${live.topic}`;
+      document.getElementById('student-live-newtab-link').href = live.joinUrl;
+
+      mountJitsiMeeting('student-jitsi-container', live.roomName, `${window.appState.currentUser.name} (${window.appState.currentUser.id})`);
+    }
+
+    function leaveStudentLiveClass() {
+      if (window.appState.jitsiApiInstance) {
+        try { window.appState.jitsiApiInstance.dispose(); } catch (e) {}
+        window.appState.jitsiApiInstance = null;
+      }
+      document.getElementById('student-jitsi-container').innerHTML = '';
+      document.getElementById('student-jitsi-container').classList.add('hidden');
+      document.getElementById('student-active-call-controls').classList.add('hidden');
+      document.getElementById('btn-leave-student-call').classList.add('hidden');
+      renderStudentLiveBanner();
+    }
+
+    // ==================== REAL-TIME DOUBT & QUERY CHAT ====================
+    async function sendChatMessage(e, role) {
+      e.preventDefault();
+      const user = window.appState.currentUser;
+      if (!user) return;
+
+      const inputId = role === 'teacher' ? 'teacher-chat-input' : 'student-chat-input';
+      const inputEl = document.getElementById(inputId);
+      const text = inputEl.value.trim();
+      if (!text) return;
+
+      const targetGroup = role === 'teacher'
+        ? (document.getElementById('chat-teacher-group-filter')?.value || 'ALL')
+        : (document.getElementById('chat-student-group-select')?.value || 'ALL');
+
+      const msgObj = {
+        id: 'msg-' + Date.now(),
+        senderId: user.id,
+        senderName: user.name,
+        senderRole: user.role,
+        group: targetGroup,
+        text,
+        timeLabel: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }),
+        createdAt: Date.now()
+      };
+
+      window.appState.chatMessages.push(msgObj);
+      localStorage.setItem('gf_chat', JSON.stringify(window.appState.chatMessages));
+      inputEl.value = '';
+      renderChatMessages(role);
+
+      if (window.appState.isCloudConnected && window.appState.cloudSaveDoc) {
+        await window.appState.cloudSaveDoc('gurumantra_chat', msgObj.id, msgObj);
+      }
+    }
+
+    async function clearGroupChat() {
+      const selectedGroup = document.getElementById('chat-teacher-group-filter')?.value || 'ALL';
+      if (!confirm(`Clear chat messages for ${selectedGroup === 'ALL' ? 'all channels' : selectedGroup}?`)) return;
+
+      const toDelete = window.appState.chatMessages.filter(m => selectedGroup === 'ALL' || m.group === selectedGroup);
+      window.appState.chatMessages = window.appState.chatMessages.filter(m => !(selectedGroup === 'ALL' || m.group === selectedGroup));
+      localStorage.setItem('gf_chat', JSON.stringify(window.appState.chatMessages));
+      renderChatMessages('teacher');
+
+      if (window.appState.isCloudConnected && window.appState.cloudDeleteDoc) {
+        for (const m of toDelete) {
+          await window.appState.cloudDeleteDoc('gurumantra_chat', m.id);
+        }
+      }
+    }
+
+    function renderChatMessages(viewRole) {
+      const user = window.appState.currentUser;
+      if (!user) return;
+
+      if (viewRole === 'teacher') {
+        const filterGrp = document.getElementById('chat-teacher-group-filter')?.value || 'ALL';
+        const targetLabel = document.getElementById('teacher-chat-target-label');
+        if (targetLabel) {
+          targetLabel.textContent = filterGrp === 'ALL' ? 'All Groups (General)' : filterGrp;
+        }
+
+        const msgs = filterGrp === 'ALL'
+          ? window.appState.chatMessages
+          : window.appState.chatMessages.filter(m => m.group === filterGrp || m.group === 'ALL');
+
+        const feed = document.getElementById('teacher-chat-feed');
+        if (!feed) return;
+        if (msgs.length === 0) {
+          feed.innerHTML = '<p class="text-xs text-slate-400 text-center my-auto py-12">No student queries yet in this channel.</p>';
+          return;
+        }
+
+        feed.innerHTML = msgs.map(m => {
+          const isMe = m.senderId === user.id;
+          const isTeacher = m.senderRole === 'teacher';
+          const senderOnline = isUserOnline(m.senderId);
+          return `
+            <div class="flex flex-col ${isMe ? 'items-end' : 'items-start'}">
+              <div class="flex flex-wrap items-center gap-1.5 mb-1">
+                <span class="w-2 h-2 rounded-full ${senderOnline ? 'bg-emerald-500' : 'bg-slate-300'}" title="${senderOnline ? 'Online' : 'Offline'}"></span>
+                <span class="text-[11px] font-bold ${isTeacher ? 'text-indigo-700' : 'text-slate-700'}">${escapeHtml(m.senderName)}</span>
+                <span class="text-[10px] px-1.5 py-0.2 rounded bg-slate-200 text-slate-600 font-semibold">${escapeHtml(m.group === 'ALL' ? 'General' : m.group)}</span>
+                <span class="text-[10px] text-slate-400">${escapeHtml(m.timeLabel || '')}</span>
+              </div>
+              <div class="max-w-[85%] px-3.5 py-2.5 rounded-2xl text-xs leading-relaxed shadow-sm break-words ${isTeacher ? 'bg-indigo-600 text-white rounded-tr-sm' : 'bg-white border border-slate-200 text-slate-800 rounded-tl-sm'}">
+                ${escapeHtml(m.text)}
+              </div>
+            </div>
+          `;
+        }).join('');
+        feed.scrollTop = feed.scrollHeight;
+      } else {
+        const selectEl = document.getElementById('chat-student-group-select');
+        const myGroups = user.groups || [];
+        if (selectEl && selectEl.options.length === 0) {
+          const opts = myGroups.length > 0 ? myGroups : ['ALL'];
+          selectEl.innerHTML = opts.map(g => `<option value="${escapeHtml(g)}">${g === 'ALL' ? '🌐 General Doubt Channel' : '🏷️ ' + escapeHtml(g)}</option>`).join('');
+        }
+
+        const activeGrp = selectEl?.value || (myGroups[0] || 'ALL');
+        const msgs = window.appState.chatMessages.filter(m =>
+          m.group === activeGrp || m.group === 'ALL'
+        );
+
+        const feed = document.getElementById('student-chat-feed');
+        if (!feed) return;
+        if (msgs.length === 0) {
+          feed.innerHTML = '<p class="text-xs text-slate-400 text-center my-auto py-12">Ask your first question below—your teacher will see it immediately!</p>';
+          return;
+        }
+
+        feed.innerHTML = msgs.map(m => {
+          const isMe = m.senderId === user.id;
+          const isTeacher = m.senderRole === 'teacher';
+          const senderOnline = isUserOnline(m.senderId);
+          return `
+            <div class="flex flex-col ${isMe ? 'items-end' : 'items-start'}">
+              <div class="flex flex-wrap items-center gap-1.5 mb-1">
+                <span class="w-2 h-2 rounded-full ${senderOnline ? 'bg-emerald-500' : 'bg-slate-300'}" title="${senderOnline ? 'Online' : 'Offline'}"></span>
+                <span class="text-[11px] font-bold ${isTeacher ? 'text-emerald-700' : 'text-slate-700'}">${isTeacher ? '👨‍🏫 ' + escapeHtml(m.senderName) : escapeHtml(m.senderName)}</span>
+                <span class="text-[10px] text-slate-400">${escapeHtml(m.timeLabel || '')}</span>
+              </div>
+              <div class="max-w-[85%] px-3.5 py-2.5 rounded-2xl text-xs leading-relaxed shadow-sm break-words ${isTeacher ? 'bg-emerald-600 text-white rounded-tl-sm' : (isMe ? 'bg-indigo-600 text-white rounded-tr-sm' : 'bg-white border border-slate-200 text-slate-800 rounded-tl-sm')}">
+                ${escapeHtml(m.text)}
+              </div>
+            </div>
+          `;
+        }).join('');
+        feed.scrollTop = feed.scrollHeight;
+      }
+    }
+
+    // ==================== CLASS / SUBJECT GROUPS MANAGEMENT ====================
+    function populateAllGroupDropdowns() {
+      const groups = window.appState.groups;
+
+      const assignSelect = document.getElementById('assign-group');
+      if (assignSelect) {
+        const currentVal = assignSelect.value;
+        assignSelect.innerHTML = `<option value="ALL">🌐 All Students (General / Every Class)</option>` +
+          groups.map(g => `<option value="${escapeHtml(g.name)}">🏷️ ${escapeHtml(g.name)}</option>`).join('');
+        if ([...assignSelect.options].some(o => o.value === currentVal)) assignSelect.value = currentVal;
+      }
+
+      const liveSelect = document.getElementById('live-class-group');
+      if (liveSelect) {
+        const currentVal = liveSelect.value;
+        liveSelect.innerHTML = `<option value="ALL">🌐 All Students</option>` +
+          groups.map(g => `<option value="${escapeHtml(g.name)}">🏷️ ${escapeHtml(g.name)}</option>`).join('');
+        if ([...liveSelect.options].some(o => o.value === currentVal)) liveSelect.value = currentVal;
+      }
+
+      const chatTchFilter = document.getElementById('chat-teacher-group-filter');
+      if (chatTchFilter) {
+        const currentVal = chatTchFilter.value;
+        chatTchFilter.innerHTML = `<option value="ALL">Channel: All Groups</option>` +
+          groups.map(g => `<option value="${escapeHtml(g.name)}">🏷️ ${escapeHtml(g.name)}</option>`).join('');
+        if ([...chatTchFilter.options].some(o => o.value === currentVal)) chatTchFilter.value = currentVal;
+      }
+
+      const filterTeacher = document.getElementById('filter-teacher-group');
+      if (filterTeacher) {
+        const currentVal = filterTeacher.value;
+        filterTeacher.innerHTML = `<option value="ALL">Filter: All Groups</option>` +
+          groups.map(g => `<option value="${escapeHtml(g.name)}">Group: ${escapeHtml(g.name)}</option>`).join('');
+        if ([...filterTeacher.options].some(o => o.value === currentVal)) filterTeacher.value = currentVal;
+      }
+
+      const filterDir = document.getElementById('filter-directory-group');
+      if (filterDir) {
+        const currentVal = filterDir.value;
+        filterDir.innerHTML = `<option value="ALL">All Groups</option><option value="UNASSIGNED">Unassigned Students</option>` +
+          groups.map(g => `<option value="${escapeHtml(g.name)}">Group: ${escapeHtml(g.name)}</option>`).join('');
+        if ([...filterDir.options].some(o => o.value === currentVal)) filterDir.value = currentVal;
+      }
+
+      const chkContainer = document.getElementById('new-user-groups-checkboxes');
+      if (chkContainer) {
+        chkContainer.innerHTML = groups.length === 0
+          ? '<p class="text-xs text-slate-400">No groups created yet.</p>'
+          : groups.map((g, idx) => `
+              <label class="flex items-center gap-2 text-xs font-semibold text-slate-800 cursor-pointer bg-white px-2.5 py-2 rounded-lg border border-indigo-100 hover:border-indigo-300">
+                <input type="checkbox" name="new-user-group-chk" value="${escapeHtml(g.name)}" ${idx === 0 ? 'checked' : ''} class="rounded text-indigo-600 focus:ring-indigo-500" />
+                <span>${escapeHtml(g.name)}</span>
+              </label>
+            `).join('');
+      }
+    }
+
+    function renderGroupsManager() {
+      const container = document.getElementById('groups-pills-list');
+      if (!container) return;
+      if (window.appState.groups.length === 0) {
+        container.innerHTML = '<p class="text-xs text-slate-400">No groups yet. Create one above!</p>';
+        return;
+      }
+      container.innerHTML = window.appState.groups.map(g => {
+        const count = window.appState.users.filter(u => u.role === 'student' && (u.groups || []).includes(g.name)).length;
+        return `
+          <div class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-indigo-50 border border-indigo-200 text-xs font-bold text-indigo-800">
+            <span>🏷️ ${escapeHtml(g.name)}</span>
+            <span class="px-1.5 py-0.2 rounded-full bg-indigo-200/80 text-indigo-900 text-[10px]">${count}</span>
+            <button type="button" onclick="deleteGroup('${escapeHtml(g.id)}', '${escapeHtml(g.name)}')" class="ml-1 text-rose-500 hover:text-rose-700 font-extrabold" title="Delete group">&times;</button>
+          </div>
+        `;
+      }).join('');
+    }
+
+    async function addNewGroup(e) {
+      e.preventDefault();
+      const input = document.getElementById('new-group-name');
+      const name = input.value.trim();
+      if (!name) return;
+
+      if (window.appState.groups.some(g => g.name.toLowerCase() === name.toLowerCase())) {
+        alert(`Group "${name}" already exists.`);
+        return;
+      }
+
+      const newGrp = { id: 'grp-' + Date.now(), name };
+      window.appState.groups.push(newGrp);
+      localStorage.setItem('gf_groups', JSON.stringify(window.appState.groups));
+
+      if (window.appState.isCloudConnected && window.appState.cloudSaveDoc) {
+        await window.appState.cloudSaveDoc('gurumantra_groups', newGrp.id, newGrp);
+      }
+
+      input.value = '';
+      populateAllGroupDropdowns();
+      renderGroupsManager();
+      renderTeacherDashboard();
+    }
+
+    async function deleteGroup(groupId, groupName) {
+      if (!confirm(`Delete group "${groupName}"? Students in this group will remain in the system.`)) return;
+      window.appState.groups = window.appState.groups.filter(g => g.id !== groupId);
+      localStorage.setItem('gf_groups', JSON.stringify(window.appState.groups));
+
+      if (window.appState.isCloudConnected && window.appState.cloudDeleteDoc) {
+        await window.appState.cloudDeleteDoc('gurumantra_groups', groupId);
+      }
+
+      populateAllGroupDropdowns();
+      renderGroupsManager();
+      renderUsersDirectory();
+      renderTeacherDashboard();
+    }
+
+    // ==================== ADMIN EDIT USER DETAILS (NAME, EMAIL, PASSWORD & GROUPS) ====================
+    function openEditUserModal(userId) {
+      const targetUser = window.appState.users.find(u => u.id === userId);
+      if (!targetUser) return;
+
+      window.appState.editingUserId = userId;
+      document.getElementById('edit-user-modal-title').textContent =
+        targetUser.role === 'teacher' ? '✏️ Edit Teacher / Admin Profile' : '✏️ Edit Student Details';
+      document.getElementById('edit-user-id-badge').textContent = `Account ID: ${targetUser.id}`;
+      document.getElementById('edit-user-name').value = targetUser.name || '';
+      document.getElementById('edit-user-email').value = targetUser.email || '';
+      document.getElementById('edit-user-pass').value = targetUser.pass || '';
+
+      const groupsSection = document.getElementById('edit-user-groups-section');
+      if (targetUser.role === 'student') {
+        groupsSection.classList.remove('hidden');
+        const assigned = targetUser.groups || [];
+        document.getElementById('edit-user-groups-checkboxes').innerHTML = window.appState.groups.length === 0
+          ? '<p class="text-xs text-slate-400">No groups created yet.</p>'
+          : window.appState.groups.map(g => `
+              <label class="flex items-center gap-2.5 p-2 rounded-lg bg-white border border-slate-200 hover:bg-indigo-50/40 cursor-pointer text-xs font-bold text-slate-800">
+                <input type="checkbox" name="edit-user-grp-chk" value="${escapeHtml(g.name)}" ${assigned.includes(g.name) ? 'checked' : ''} class="rounded text-indigo-600" />
+                <span>🏷️ ${escapeHtml(g.name)}</span>
+              </label>
+            `).join('');
+      } else {
+        groupsSection.classList.add('hidden');
+      }
+
+      document.getElementById('edit-user-modal').classList.remove('hidden');
+    }
+
+    function closeEditUserModal() {
+      window.appState.editingUserId = null;
+      document.getElementById('edit-user-modal').classList.add('hidden');
+    }
+
+    async function saveUserDetailsEdit(e) {
+      e.preventDefault();
+      const targetUser = window.appState.users.find(u => u.id === window.appState.editingUserId);
+      if (!targetUser) return;
+
+      const newName = document.getElementById('edit-user-name').value.trim();
+      const newEmail = document.getElementById('edit-user-email').value.trim().toLowerCase();
+      const newPass = document.getElementById('edit-user-pass').value.trim();
+
+      if (!newName || !newEmail || !newPass) {
+        alert('Name, Email, and Password cannot be empty.');
+        return;
+      }
+
+      targetUser.name = newName;
+      targetUser.email = newEmail;
+      targetUser.pass = newPass;
+
+      if (targetUser.role === 'student') {
+        targetUser.groups = [...document.querySelectorAll('input[name="edit-user-grp-chk"]:checked')].map(cb => cb.value);
+      }
+
+      localStorage.setItem('gf_users', JSON.stringify(window.appState.users));
+
+      if (window.appState.currentUser && window.appState.currentUser.id === targetUser.id) {
+        window.appState.currentUser = { ...targetUser };
+        sessionStorage.setItem('gf_user', JSON.stringify(window.appState.currentUser));
+        document.getElementById('user-display-name').textContent = targetUser.name;
+        document.getElementById('user-avatar').textContent = targetUser.name.split(' ').map(n => n[0]).join('').slice(0, 2).toUpperCase();
+        publishUserPresence(true);
+      }
+
+      if (window.appState.isCloudConnected && window.appState.cloudSaveDoc) {
+        await window.appState.cloudSaveDoc('gurumantra_users', targetUser.id, targetUser);
+      }
+
+      closeEditUserModal();
+      renderGroupsManager();
+      renderUsersDirectory();
+      renderTeacherDashboard();
+      alert(`Updated details for ${targetUser.name} (${targetUser.id})!`);
+    }
+
+    // ==================== TEACHER & STUDENT SUB-TABS ====================
+    function switchTeacherTab(tabName) {
+      const tabs = ['workspace', 'live', 'users'];
+      tabs.forEach(t => {
+        const panel = document.getElementById(`teacher-tab-${t}`);
+        const btn = document.getElementById(`subtab-btn-${t}`);
+        if (!panel || !btn) return;
+        if (t === tabName) {
+          panel.classList.remove('hidden');
+          btn.className = 'shrink-0 px-3.5 sm:px-4 py-2.5 rounded-xl text-xs sm:text-sm font-bold bg-indigo-600 text-white shadow-sm transition flex items-center gap-1.5';
+        } else {
+          panel.classList.add('hidden');
+          btn.className = 'shrink-0 px-3.5 sm:px-4 py-2.5 rounded-xl text-xs sm:text-sm font-bold bg-white text-slate-700 hover:bg-slate-100 border border-slate-200 transition flex items-center gap-1.5';
+        }
+      });
+
+      if (tabName === 'live') {
+        populateAllGroupDropdowns();
+        renderTeacherLiveStatus();
+        renderChatMessages('teacher');
+        updatePresenceDisplays();
+      } else if (tabName === 'users') {
+        populateAllGroupDropdowns();
+        renderGroupsManager();
+        renderUsersDirectory();
+        suggestNextUserId();
+      }
+    }
+
+    function switchStudentTab(tabName) {
+      const tabs = ['assignments', 'live'];
+      tabs.forEach(t => {
+        const panel = document.getElementById(`student-tab-${t}`);
+        const btn = document.getElementById(`stu-subtab-btn-${t}`);
+        if (!panel || !btn) return;
+        if (t === tabName) {
+          panel.classList.remove('hidden');
+          btn.className = 'px-3 sm:px-4 py-2.5 rounded-xl text-xs sm:text-sm font-bold bg-indigo-600 text-white shadow-sm transition text-center flex items-center justify-center gap-1.5';
+        } else {
+          panel.classList.add('hidden');
+          btn.className = 'px-3 sm:px-4 py-2.5 rounded-xl text-xs sm:text-sm font-bold bg-white text-slate-700 hover:bg-slate-100 border border-slate-200 transition flex items-center justify-center gap-1.5';
+        }
+      });
+
+      if (tabName === 'live') {
+        renderStudentLiveBanner();
+        renderChatMessages('student');
+        updatePresenceDisplays();
+      }
+    }
+
+    function toggleNewUserGroupPicker() {
+      const role = document.getElementById('new-user-role').value;
+      document.getElementById('new-user-groups-container').classList.toggle('hidden', role !== 'student');
+      suggestNextUserId();
+    }
+
+    function suggestNextUserId() {
+      const role = document.getElementById('new-user-role').value;
+      if (role === 'student') {
+        const stuCount = window.appState.users.filter(u => u.role === 'student').length + 1;
+        const nextNum = 1000 + stuCount;
+        document.getElementById('new-user-id').value = `STU-${nextNum}`;
+        document.getElementById('new-user-email').value = `student${stuCount}@school.edu`;
+        document.getElementById('new-user-pass').value = `Pass@${nextNum}`;
+      } else {
+        const tchCount = window.appState.users.filter(u => u.role === 'teacher').length + 1;
+        const nextNum = 2025 + tchCount;
+        document.getElementById('new-user-id').value = `TCH-${nextNum}`;
+        document.getElementById('new-user-email').value = `teacher${tchCount}@school.edu`;
+        document.getElementById('new-user-pass').value = `Teacher@${nextNum}`;
+      }
+    }
+
+    async function addNewUser(e) {
+      e.preventDefault();
+      const role = document.getElementById('new-user-role').value;
+      const name = document.getElementById('new-user-name').value.trim();
+      const id = document.getElementById('new-user-id').value.trim().toUpperCase();
+      const email = document.getElementById('new-user-email').value.trim().toLowerCase();
+      const pass = document.getElementById('new-user-pass').value.trim();
+
+      if (window.appState.users.some(u => u.id.toUpperCase() === id)) {
+        alert(`An account with ID "${id}" already exists. Please use a unique ID.`);
+        return;
+      }
+
+      const selectedGroups = role === 'student'
+        ? [...document.querySelectorAll('input[name="new-user-group-chk"]:checked')].map(cb => cb.value)
+        : [];
+
+      const newUserObj = { id, email, pass, name, role, groups: selectedGroups };
+      window.appState.users.push(newUserObj);
+      localStorage.setItem('gf_users', JSON.stringify(window.appState.users));
+
+      if (window.appState.isCloudConnected && window.appState.cloudSaveDoc) {
+        await window.appState.cloudSaveDoc('gurumantra_users', newUserObj.id, newUserObj);
+      }
+
+      document.getElementById('new-user-name').value = '';
+      suggestNextUserId();
+      renderGroupsManager();
+      renderUsersDirectory();
+      renderTeacherDashboard();
+      alert(`${role === 'teacher' ? 'Teacher' : 'Student'} "${name}" (${id}) added!`);
+    }
+
+    async function removeUserAccount(userId) {
+      if (userId === 'TCH-2026' || userId === window.appState.currentUser?.id) {
+        alert('You cannot delete your own active primary teacher account.');
+        return;
+      }
+      if (!confirm(`Remove user ${userId}? They will no longer be able to log in.`)) return;
+
+      window.appState.users = window.appState.users.filter(u => u.id !== userId);
+      localStorage.setItem('gf_users', JSON.stringify(window.appState.users));
+
+      if (window.appState.isCloudConnected && window.appState.cloudDeleteDoc) {
+        await window.appState.cloudDeleteDoc('gurumantra_users', userId);
+      }
+
+      renderGroupsManager();
+      renderUsersDirectory();
+      renderTeacherDashboard();
+    }
+
+    function renderUsersDirectory() {
+      const filterGroup = document.getElementById('filter-directory-group')?.value || 'ALL';
+      const filterStatus = document.getElementById('filter-directory-status')?.value || 'ALL';
+      let students = window.appState.users.filter(u => u.role === 'student');
+      const teachers = window.appState.users.filter(u => u.role === 'teacher');
+
+      const onlineStuTotal = students.filter(s => isUserOnline(s.id)).length;
+      const onlineTchTotal = teachers.filter(t => isUserOnline(t.id)).length;
+
+      if (filterGroup === 'UNASSIGNED') {
+        students = students.filter(s => !s.groups || s.groups.length === 0);
+      } else if (filterGroup !== 'ALL') {
+        students = students.filter(s => (s.groups || []).includes(filterGroup));
+      }
+
+      if (filterStatus === 'ONLINE') {
+        students = students.filter(s => isUserOnline(s.id));
+      } else if (filterStatus === 'OFFLINE') {
+        students = students.filter(s => !isUserOnline(s.id));
+      }
+
+      students.sort((a, b) => (isUserOnline(b.id) ? 1 : 0) - (isUserOnline(a.id) ? 1 : 0));
+
+      document.getElementById('dir-student-count').textContent = students.length;
+      document.getElementById('dir-teacher-count').textContent = teachers.length;
+      document.getElementById('dir-student-online-summary').textContent = `${onlineStuTotal} of ${window.appState.users.filter(u => u.role === 'student').length} students online now`;
+      document.getElementById('dir-teacher-online-summary').textContent = `${onlineTchTotal} of ${teachers.length} teachers online now`;
+
+      document.getElementById('directory-students-list').innerHTML = students.length === 0
+        ? '<p class="text-xs text-slate-400">No students match this filter.</p>'
+        : students.map(s => {
+            const online = isUserOnline(s.id);
+            const statusText = formatLastSeen(s.id);
+            const presenceBadge = online
+              ? `<span class="inline-flex items-center gap-1 text-[11px] font-extrabold px-2 py-0.5 rounded-full bg-emerald-100 text-emerald-800 border border-emerald-200"><span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span> Online</span>`
+              : `<span class="inline-flex items-center gap-1 text-[11px] font-semibold px-2 py-0.5 rounded-full bg-slate-200/80 text-slate-600"><span class="w-2 h-2 rounded-full bg-slate-400"></span> ${escapeHtml(statusText)}</span>`;
+
+            const grpBadges = (s.groups && s.groups.length > 0)
+              ? s.groups.map(g => `<span class="text-[11px] font-bold px-2 py-0.5 rounded-full bg-indigo-50 text-indigo-700 border border-indigo-200">🏷️ ${escapeHtml(g)}</span>`).join(' ')
+              : '<span class="text-[11px] font-semibold px-2 py-0.5 rounded-full bg-slate-200 text-slate-600">No Group Assigned</span>';
+
+            return `
+              <div class="p-3.5 rounded-xl border ${online ? 'border-emerald-300 bg-emerald-50/30' : 'border-slate-200 bg-slate-50'} flex flex-col sm:flex-row sm:items-start justify-between gap-2.5 transition">
+                <div class="space-y-1.5 min-w-0">
+                  <div class="flex flex-wrap items-center gap-1.5">
+                    <span class="text-xs font-extrabold px-2 py-0.5 rounded bg-indigo-100 text-indigo-700">${escapeHtml(s.id)}</span>
+                    <span class="font-bold text-sm text-slate-900">${escapeHtml(s.name)}</span>
+                    ${presenceBadge}
+                  </div>
+                  <div class="flex flex-wrap gap-1">${grpBadges}</div>
+                  <p class="text-xs text-slate-500 break-all">Email: <strong>${escapeHtml(s.email)}</strong> • Pass: <code class="bg-white px-1.5 py-0.5 rounded border border-slate-200 text-slate-700">${escapeHtml(s.pass)}</code></p>
+                </div>
+                <div class="flex items-center gap-2 pt-1 sm:pt-0 shrink-0">
+                  <button type="button" onclick="openEditUserModal('${escapeHtml(s.id)}')" class="flex-1 sm:flex-none text-xs text-indigo-600 hover:text-indigo-800 font-semibold px-3 py-1.5 rounded-lg bg-white border border-slate-200 hover:bg-indigo-50">✏️ Edit</button>
+                  <button type="button" onclick="removeUserAccount('${escapeHtml(s.id)}')" class="text-xs text-rose-600 hover:text-rose-800 font-semibold px-2.5 py-1.5 rounded-lg hover:bg-rose-50">Remove</button>
+                </div>
+              </div>
+            `;
+          }).join('');
+
+      document.getElementById('directory-teachers-list').innerHTML = teachers.map(t => {
+        const online = isUserOnline(t.id);
+        const statusText = formatLastSeen(t.id);
+        const presenceBadge = online
+          ? `<span class="inline-flex items-center gap-1 text-[11px] font-extrabold px-2 py-0.5 rounded-full bg-emerald-100 text-emerald-800 border border-emerald-200"><span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span> Online</span>`
+          : `<span class="inline-flex items-center gap-1 text-[11px] font-semibold px-2 py-0.5 rounded-full bg-slate-200/80 text-slate-600"><span class="w-2 h-2 rounded-full bg-slate-400"></span> ${escapeHtml(statusText)}</span>`;
+
+        return `
+          <div class="p-3.5 rounded-xl border ${online ? 'border-emerald-300 bg-emerald-50/30' : 'border-slate-200 bg-slate-50'} flex flex-col sm:flex-row sm:items-center justify-between gap-2.5 transition">
+            <div class="min-w-0">
+              <div class="flex flex-wrap items-center gap-1.5">
+                <span class="text-xs font-extrabold px-2 py-0.5 rounded bg-emerald-100 text-emerald-700">${escapeHtml(t.id)}</span>
+                <span class="font-bold text-sm text-slate-900">${escapeHtml(t.name)}</span>
+                ${presenceBadge}
+                ${t.id === 'TCH-2026' ? '<span class="text-[10px] font-bold px-2 py-0.5 rounded-full bg-amber-100 text-amber-800">Admin</span>' : ''}
+              </div>
+              <p class="text-xs text-slate-500 mt-1 break-all">Email: <strong>${escapeHtml(t.email)}</strong> • Pass: <code class="bg-white px-1.5 py-0.5 rounded border border-slate-200 text-slate-700">${escapeHtml(t.pass)}</code></p>
+            </div>
+            <div class="flex items-center gap-2 shrink-0">
+              <button type="button" onclick="openEditUserModal('${escapeHtml(t.id)}')" class="flex-1 sm:flex-none text-xs text-indigo-600 hover:text-indigo-800 font-semibold px-3 py-1.5 rounded-lg bg-white border border-slate-200 hover:bg-indigo-50">✏️ Edit Profile</button>
+              ${t.id !== 'TCH-2026' && t.id !== window.appState.currentUser?.id
+                ? `<button type="button" onclick="removeUserAccount('${escapeHtml(t.id)}')" class="text-xs text-rose-600 hover:text-rose-800 font-semibold px-2.5 py-1.5 rounded-lg hover:bg-rose-50">Remove</button>`
+                : ''}
+            </div>
+          </div>
+        `;
+      }).join('');
+    }
+
+    // ==================== DIRECT PDF ATTACHMENTS FOR TEACHER ====================
+    async function extractTextFromPdfFile(file, canvasElement = null) {
+      const arrayBuffer = await file.arrayBuffer();
+      const pdf = await pdfjsLib.getDocument({ data: arrayBuffer }).promise;
+      let fullText = '';
+
+      for (let pageNum = 1; pageNum <= pdf.numPages; pageNum++) {
+        const page = await pdf.getPage(pageNum);
+        const textContent = await page.getTextContent();
+        const pageText = textContent.items.map(item => item.str).join(' ');
+        fullText += `--- Page ${pageNum} ---\n${pageText}\n\n`;
+
+        if (pageNum === 1 && canvasElement) {
+          const viewport = page.getViewport({ scale: 1.1 });
+          const context = canvasElement.getContext('2d');
+          canvasElement.height = viewport.height;
+          canvasElement.width = viewport.width;
+          await page.render({ canvasContext: context, viewport }).promise;
+        }
+      }
+      return { text: fullText.trim(), numPages: pdf.numPages };
+    }
+
+    async function handleTeacherPdfAttach(event, kind) {
+      const file = event.target.files[0];
+      if (!file) return;
+
+      if (file.size > 720 * 1024) {
+        alert(`File "${file.name}" is ${(file.size / 1024).toFixed(0)} KB. Please keep each PDF under 720 KB so it stays within Firestore's 1 MiB document size limit.`);
+        event.target.value = '';
+        return;
+      }
+
+      const base64 = await fileToBase64(file);
+      let extracted = '';
+      try {
+        const res = await extractTextFromPdfFile(file);
+        extracted = res.text;
+      } catch (e) {
+        console.warn('PDF text extraction optional fallback:', e);
+      }
+
+      if (kind === 'question') {
+        window.appState.pendingQuestionPdf = { name: file.name, base64 };
+        document.getElementById('question-pdf-chip').classList.remove('hidden');
+        document.getElementById('question-pdf-chip-label').textContent = `📄 ${file.name} (${(file.size / 1024).toFixed(0)} KB)`;
+        const qBox = document.getElementById('assign-questions');
+        if (!qBox.value.trim() && extracted) qBox.value = extracted;
+      } else {
+        window.appState.pendingRubricPdf = { name: file.name, base64 };
+        document.getElementById('rubric-pdf-chip').classList.remove('hidden');
+        document.getElementById('rubric-pdf-chip-label').textContent = `📄 ${file.name} (${(file.size / 1024).toFixed(0)} KB)`;
+        const rBox = document.getElementById('assign-rubric');
+        if (!rBox.value.trim() && extracted) rBox.value = extracted;
+      }
+    }
+
+    function clearTeacherPdfAttach(kind) {
+      if (kind === 'question') {
+        window.appState.pendingQuestionPdf = { name: '', base64: '' };
+        document.getElementById('question-pdf-chip').classList.add('hidden');
+        document.getElementById('assign-question-pdf-input').value = '';
+      } else {
+        window.appState.pendingRubricPdf = { name: '', base64: '' };
+        document.getElementById('rubric-pdf-chip').classList.add('hidden');
+        document.getElementById('assign-rubric-pdf-input').value = '';
+      }
+    }
+
+    // ==================== TEACHER DASHBOARD FUNCTIONS ====================
+    async function createAssignment(e) {
+      e.preventDefault();
+      const targetGroup = document.getElementById('assign-group').value;
+      const qText = document.getElementById('assign-questions').value.trim();
+      const rText = document.getElementById('assign-rubric').value.trim();
+      const qPdf = window.appState.pendingQuestionPdf;
+      const rPdf = window.appState.pendingRubricPdf;
+
+      if (!qText && !qPdf.base64) {
+        alert('Please either attach a Question Paper PDF or type the questions.');
+        return;
+      }
+      if (!rText && !rPdf.base64) {
+        alert('Please either attach a Marking Scheme PDF or type the grading rubric.');
+        return;
+      }
+
+      const btn = document.getElementById('btn-publish-assign');
+      btn.disabled = true;
+      btn.textContent = 'Uploading PDFs & Publishing...';
+
+      try {
+        const assignId = 'assign-' + Date.now();
+        let questionPdfFileId = '';
+        let rubricPdfFileId = '';
+
+        if (qPdf.base64) {
+          questionPdfFileId = `file-q-${assignId}`;
+          await savePdfToCloudStorage(questionPdfFileId, qPdf.name, qPdf.base64);
+        }
+        if (rPdf.base64) {
+          rubricPdfFileId = `file-r-${assignId}`;
+          await savePdfToCloudStorage(rubricPdfFileId, rPdf.name, rPdf.base64);
+        }
+
+        const newAssign = {
+          id: assignId,
+          title: document.getElementById('assign-title').value.trim(),
+          targetGroup,
+          totalMarks: parseInt(document.getElementById('assign-marks').value, 10),
+          dueDate: document.getElementById('assign-due').value,
+          questions: qText || `Refer to the attached Question Paper PDF: ${qPdf.name}`,
+          rubric: rText || `Refer to the attached Marking Scheme PDF: ${rPdf.name}`,
+          questionPdfName: qPdf.name || '',
+          questionPdfFileId,
+          rubricPdfName: rPdf.name || '',
+          rubricPdfFileId,
+          createdAt: Date.now()
+        };
+
+        window.appState.assignments.unshift(newAssign);
+        localStorage.setItem('gf_assignments', JSON.stringify(window.appState.assignments));
+
+        if (window.appState.isCloudConnected && window.appState.cloudSaveDoc) {
+          await window.appState.cloudSaveDoc('gurumantra_assignments', newAssign.id, newAssign);
+        }
+
+        e.target.reset();
+        document.getElementById('assign-marks').value = 20;
+        document.getElementById('assign-group').value = targetGroup;
+        clearTeacherPdfAttach('question');
+        clearTeacherPdfAttach('rubric');
+        renderTeacherDashboard();
+        alert(targetGroup === 'ALL'
+          ? 'Assignment & PDFs published to all students!'
+          : `Assignment & PDFs published exclusively to "${targetGroup}"!`);
+      } catch (err) {
+        alert('Failed to publish assignment: ' + err.message);
+      } finally {
+        btn.disabled = false;
+        btn.textContent = 'Publish Assignment to Group';
+      }
+    }
+
+    async function deleteAssignment(id) {
+      if (!confirm('Delete this assignment?')) return;
+      const target = window.appState.assignments.find(a => a.id === id);
+      window.appState.assignments = window.appState.assignments.filter(a => a.id !== id);
+      localStorage.setItem('gf_assignments', JSON.stringify(window.appState.assignments));
+      if (window.appState.isCloudConnected && window.appState.cloudDeleteDoc) {
+        await window.appState.cloudDeleteDoc('gurumantra_assignments', id);
+        if (target?.questionPdfFileId) await window.appState.cloudDeleteDoc('gurumantra_files', target.questionPdfFileId);
+        if (target?.rubricPdfFileId) await window.appState.cloudDeleteDoc('gurumantra_files', target.rubricPdfFileId);
+      }
+      renderTeacherDashboard();
+    }
+
+    async function updateSubmissionScore(subId, newScore) {
+      const sub = window.appState.submissions.find(s => s.id === subId);
+      if (!sub) return;
+      sub.score = Number(newScore);
+      sub.teacherVerified = true;
+      localStorage.setItem('gf_submissions', JSON.stringify(window.appState.submissions));
+      if (window.appState.isCloudConnected && window.appState.cloudSaveDoc) {
+        await window.appState.cloudSaveDoc('gurumantra_submissions', sub.id, sub);
+      }
+      renderTeacherDashboard();
+    }
+
+    function renderTeacherDashboard() {
+      const filterGroup = document.getElementById('filter-teacher-group')?.value || 'ALL';
+      const filteredAssignments = filterGroup === 'ALL'
+        ? window.appState.assignments
+        : window.appState.assignments.filter(a => a.targetGroup === filterGroup);
+
+      const filteredSubmissions = filterGroup === 'ALL'
+        ? window.appState.submissions
+        : window.appState.submissions.filter(s => s.targetGroup === filterGroup);
+
+      document.getElementById('stat-assignments').textContent = window.appState.assignments.length;
+      document.getElementById('stat-submissions').textContent = window.appState.submissions.length;
+      updatePresenceDisplays();
+
+      const assignList = document.getElementById('teacher-assignments-list');
+      if (filteredAssignments.length === 0) {
+        assignList.innerHTML = '<p class="text-sm text-slate-400">No assignments posted for this filter.</p>';
+      } else {
+        assignList.innerHTML = filteredAssignments.map(a => {
+          const grpBadge = a.targetGroup === 'ALL'
+            ? '<span class="text-[11px] font-bold px-2 py-0.5 rounded-full bg-slate-200 text-slate-700">🌐 All Students</span>'
+            : `<span class="text-[11px] font-bold px-2 py-0.5 rounded-full bg-indigo-100 text-indigo-700">🏷️ ${escapeHtml(a.targetGroup)}</span>`;
+
+          const hasQPdf = Boolean(a.questionPdfFileId || a.questionPdfBase64);
+          const hasRPdf = Boolean(a.rubricPdfFileId || a.rubricPdfBase64);
+
+          const pdfButtons = `
+            <div class="flex flex-wrap gap-1.5 mt-2">
+              ${hasQPdf ? `<button type="button" onclick="previewAssignmentPdfById('${a.id}', 'question')" class="text-[11px] font-bold px-2.5 py-1.5 rounded-lg bg-white border border-indigo-200 text-indigo-700 hover:bg-indigo-50">📄 ${escapeHtml(a.questionPdfName || 'Question PDF')}</button>` : ''}
+              ${hasRPdf ? `<button type="button" onclick="previewAssignmentPdfById('${a.id}', 'rubric')" class="text-[11px] font-bold px-2.5 py-1.5 rounded-lg bg-white border border-emerald-200 text-emerald-700 hover:bg-emerald-50">✅ ${escapeHtml(a.rubricPdfName || 'Marking PDF')}</button>` : ''}
+            </div>
+          `;
+
+          return `
+            <div class="p-3.5 sm:p-4 rounded-xl border border-slate-200 bg-slate-50 flex items-start justify-between gap-2.5">
+              <div class="space-y-1 min-w-0">
+                <div class="flex flex-wrap items-center gap-1.5">
+                  <h3 class="font-bold text-slate-900 text-sm">${escapeHtml(a.title)}</h3>
+                  ${grpBadge}
+                </div>
+                <p class="text-xs text-slate-500">Max Marks: <strong>${a.totalMarks}</strong> • Due: ${a.dueDate}</p>
+                ${pdfButtons}
+              </div>
+              <button type="button" onclick="deleteAssignment('${a.id}')" class="text-xs text-rose-600 hover:text-rose-800 font-semibold px-2 py-1 rounded hover:bg-rose-50 shrink-0">Delete</button>
+            </div>
+          `;
+        }).join('');
+      }
+
+      const subList = document.getElementById('teacher-submissions-list');
+      if (filteredSubmissions.length === 0) {
+        subList.innerHTML = '<div class="p-6 text-center rounded-xl border border-dashed border-slate-300 text-sm text-slate-400">No student PDF submissions for this group yet.</div>';
+      } else {
+        subList.innerHTML = filteredSubmissions.map(s => {
+          const hasAnsPdf = Boolean(s.answerPdfFileId || s.answerPdfBase64);
+          const stuOnline = isUserOnline(s.studentId);
+          return `
+            <div class="p-4 sm:p-5 rounded-2xl border border-slate-200 bg-slate-50/70 space-y-3">
+              <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2.5 border-b border-slate-200 pb-3">
+                <div class="min-w-0">
+                  <div class="flex flex-wrap items-center gap-1.5">
+                    <span class="inline-block w-2 h-2 rounded-full ${stuOnline ? 'bg-emerald-500' : 'bg-slate-300'}" title="${stuOnline ? 'Online' : 'Offline'}"></span>
+                    <span class="text-xs font-bold px-2 py-0.5 rounded bg-indigo-100 text-indigo-700">${escapeHtml(s.studentId)}</span>
+                    <span class="font-bold text-slate-900 text-sm">${escapeHtml(s.studentName)}</span>
+                    ${s.targetGroup && s.targetGroup !== 'ALL' ? `<span class="text-[11px] font-bold px-2 py-0.5 rounded-full bg-emerald-100 text-emerald-700">🏷️ ${escapeHtml(s.targetGroup)}</span>` : ''}
+                  </div>
+                  <div class="flex flex-wrap items-center gap-2 mt-1.5">
+                    <p class="text-xs text-slate-500">${escapeHtml(s.assignmentTitle)} • <strong>${escapeHtml(s.fileName)}</strong></p>
+                    ${hasAnsPdf ? `<button type="button" onclick="previewSubmissionPdfById('${s.id}')" class="text-[11px] font-bold px-2.5 py-1 rounded-lg bg-indigo-600 text-white hover:bg-indigo-700">👁️ View PDF</button>` : ''}
+                  </div>
+                </div>
+                <div class="flex items-center gap-2 shrink-0">
+                  <label class="text-xs font-bold text-slate-600">Score:</label>
+                  <input type="number" min="0" max="${s.totalMarks}" value="${s.score}" onchange="updateSubmissionScore('${s.id}', this.value)"
+                    class="w-16 px-2 py-1.5 rounded-lg border border-slate-300 text-base sm:text-sm font-extrabold text-indigo-700 bg-white text-center" />
+                  <span class="text-xs font-bold text-slate-500">/ ${s.totalMarks}</span>
+                </div>
+              </div>
+              <div class="text-xs text-slate-700 bg-white p-3.5 rounded-xl border border-slate-200 space-y-2">
+                <p class="font-bold text-indigo-700">AI Evaluation Feedback (${escapeHtml(s.gradingMode || 'AI')}):</p>
+                <p class="whitespace-pre-wrap leading-relaxed break-words">${escapeHtml(s.feedback)}</p>
+              </div>
+            </div>
+          `;
+        }).join('');
+      }
+    }
+
+    // ==================== STUDENT PORTAL FUNCTIONS ====================
+    function renderStudentPortal() {
+      const latestUser = window.appState.users.find(u => u.id === window.appState.currentUser.id) || window.appState.currentUser;
+      window.appState.currentUser = latestUser;
+      document.getElementById('student-welcome-heading').textContent = `Welcome, ${latestUser.name}!`;
+      document.getElementById('user-display-name').textContent = latestUser.name;
+      const myGroups = latestUser.groups || [];
+
+      const badgesContainer = document.getElementById('student-enrolled-badges');
+      if (badgesContainer) {
+        badgesContainer.innerHTML = myGroups.length > 0
+          ? myGroups.map(g => `<span class="text-[11px] font-bold px-2.5 py-0.5 rounded-full bg-white/20 text-white border border-white/25">🏷️ ${escapeHtml(g)}</span>`).join('')
+          : '<span class="text-[11px] font-semibold px-2.5 py-0.5 rounded-full bg-white/15 text-indigo-100">General Group</span>';
+      }
+
+      const visibleAssignments = window.appState.assignments.filter(a =>
+        !a.targetGroup || a.targetGroup === 'ALL' || myGroups.includes(a.targetGroup)
+      );
+
+      const list = document.getElementById('student-assignments-list');
+      if (visibleAssignments.length === 0) {
+        list.innerHTML = '<div class="p-5 rounded-2xl border border-dashed border-slate-300 bg-white text-sm text-slate-400">No assignments have been posted for your class/subject group yet.</div>';
+        document.getElementById('student-active-title').textContent = 'No Active Assignments';
+        document.getElementById('student-active-meta').textContent = '';
+        document.getElementById('student-active-questions').textContent = 'Check back later once your teacher posts an assignment for your group.';
+        document.getElementById('student-active-group-badge').textContent = 'No Group';
+        document.getElementById('student-question-pdf-banner').classList.add('hidden');
+        return;
+      }
+
+      if (!window.appState.selectedAssignmentId || !visibleAssignments.some(a => a.id === window.appState.selectedAssignmentId)) {
+        window.appState.selectedAssignmentId = visibleAssignments[0].id;
+      }
+
+      list.innerHTML = visibleAssignments.map(a => {
+        const isSelected = a.id === window.appState.selectedAssignmentId;
+        const alreadySubmitted = window.appState.submissions.some(s => s.assignmentId === a.id && s.studentId === latestUser.id);
+        const grpLabel = !a.targetGroup || a.targetGroup === 'ALL' ? 'All Students' : a.targetGroup;
+        const hasQPdf = Boolean(a.questionPdfFileId || a.questionPdfBase64);
+        return `
+          <div onclick="selectStudentAssignment('${a.id}')"
+            class="p-3.5 sm:p-4 rounded-2xl border cursor-pointer transition ${isSelected ? 'border-indigo-600 bg-indigo-50/70 shadow-sm ring-1 ring-indigo-600/20' : 'border-slate-200 bg-white hover:border-indigo-300'}">
+            <div class="flex items-start justify-between gap-2">
+              <div class="min-w-0">
+                <span class="text-[10px] font-extrabold uppercase tracking-wider text-indigo-600">🏷️ ${escapeHtml(grpLabel)} ${hasQPdf ? '• 📎 PDF' : ''}</span>
+                <h3 class="font-bold text-sm text-slate-900 mt-0.5">${escapeHtml(a.title)}</h3>
+              </div>
+              ${alreadySubmitted ? '<span class="shrink-0 text-[11px] font-bold px-2 py-0.5 rounded-full bg-emerald-100 text-emerald-700">Submitted</span>' : '<span class="shrink-0 text-[11px] font-bold px-2 py-0.5 rounded-full bg-amber-100 text-amber-700">Pending</span>'}
+            </div>
+            <p class="text-xs text-slate-500 mt-1">Total Marks: ${a.totalMarks} • Due: ${a.dueDate}</p>
+          </div>
+        `;
+      }).join('');
+
+      const active = visibleAssignments.find(a => a.id === window.appState.selectedAssignmentId);
+      if (active) {
+        document.getElementById('student-active-title').textContent = active.title;
+        document.getElementById('student-active-meta').textContent = `Total Marks: ${active.totalMarks} • Due Date: ${active.dueDate}`;
+        document.getElementById('student-active-questions').textContent = active.questions;
+        document.getElementById('student-active-group-badge').textContent = !active.targetGroup || active.targetGroup === 'ALL' ? '🌐 All Students' : `🏷️ ${active.targetGroup}`;
+
+        const qPdfBanner = document.getElementById('student-question-pdf-banner');
+        const hasQPdf = Boolean(active.questionPdfFileId || active.questionPdfBase64);
+        if (hasQPdf) {
+          qPdfBanner.classList.remove('hidden');
+          document.getElementById('student-question-pdf-name').textContent = active.questionPdfName || 'Question_Paper.pdf';
+        } else {
+          qPdfBanner.classList.add('hidden');
+        }
+      }
+
+      const mySubs = window.appState.submissions.filter(s => s.studentId === latestUser.id);
+      const mySubContainer = document.getElementById('student-submissions-list');
+      if (mySubs.length === 0) {
+        mySubContainer.innerHTML = '<p class="text-sm text-slate-400">You have not submitted any PDFs yet.</p>';
+      } else {
+        mySubContainer.innerHTML = mySubs.map(s => `
+          <div class="p-3.5 sm:p-4 rounded-xl border border-slate-200 bg-slate-50 space-y-2">
+            <div class="flex flex-wrap items-center justify-between gap-2">
+              <h4 class="font-bold text-sm text-slate-900">${escapeHtml(s.assignmentTitle)}</h4>
+              <span class="text-xs sm:text-sm font-extrabold px-3 py-1 rounded-full bg-indigo-600 text-white shrink-0">${s.score} / ${s.totalMarks}</span>
+            </div>
+            <p class="text-xs text-slate-500">PDF: ${escapeHtml(s.fileName)} • ${s.submittedAt}</p>
+            <div class="text-xs text-slate-700 bg-white p-3 rounded-lg border border-slate-200 whitespace-pre-wrap leading-relaxed break-words">${escapeHtml(s.feedback)}</div>
+          </div>
+        `).join('');
+      }
+      updatePresenceDisplays();
+    }
+
+    function selectStudentAssignment(id) {
+      window.appState.selectedAssignmentId = id;
+      renderStudentPortal();
+      if (window.innerWidth < 1024) {
+        document.getElementById('student-workspace')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    }
+
+    async function handleStudentPdfSelect(event) {
+      const file = event.target.files[0];
+      if (!file) return;
+
+      if (file.size > 720 * 1024) {
+        alert(`Your PDF is ${(file.size / 1024).toFixed(0)} KB. Please keep answer PDFs under 720 KB so they upload cleanly to the cloud.`);
+        event.target.value = '';
+        return;
+      }
+
+      window.appState.currentPdfFileName = file.name;
+      window.appState.currentStudentPdfBase64 = await fileToBase64(file);
+
+      const previewContainer = document.getElementById('pdf-preview-container');
+      const canvas = document.getElementById('pdf-preview-canvas');
+      const textBox = document.getElementById('pdf-extracted-text');
+      const submitBtn = document.getElementById('btn-submit-pdf');
+
+      previewContainer.classList.remove('hidden');
+      textBox.value = 'Rendering PDF preview...';
+      submitBtn.disabled = true;
+
+      try {
+        const { text, numPages } = await extractTextFromPdfFile(file, canvas);
+        document.getElementById('pdf-page-count').textContent = numPages;
+        textBox.value = text || '(Scanned / handwritten PDF detected — Gemini AI will read your attached PDF pages directly.)';
+        submitBtn.disabled = false;
+      } catch (err) {
+        textBox.value = '(PDF attached — Gemini AI will read your attached PDF directly.)';
+        submitBtn.disabled = false;
+      }
+    }
+
+    async function submitAndGradePdf() {
+      const activeAssign = window.appState.assignments.find(a => a.id === window.appState.selectedAssignmentId);
+      if (!activeAssign) return;
+
+      const studentAnswerText = document.getElementById('pdf-extracted-text').value.trim();
+      const studentPdfBase64 = window.appState.currentStudentPdfBase64;
+
+      if (!studentAnswerText && !studentPdfBase64) {
+        alert('Please select your Answer PDF before submitting.');
+        return;
+      }
+
+      const btn = document.getElementById('btn-submit-pdf');
+      btn.disabled = true;
+      btn.innerHTML = '<span>⏳ AI is reading your PDF & grading...</span>';
+
+      try {
+        let result = { score: 0, feedback: '', mode: 'Smart Rubric Evaluator' };
+
+        if (window.appState.geminiApiKey) {
+          try {
+            result = await gradeWithGeminiApi(activeAssign, studentAnswerText, studentPdfBase64);
+          } catch (err) {
+            console.error(err);
+            result = gradeWithLocalFallback(activeAssign, studentAnswerText);
+            result.feedback = `(Note: Gemini API call failed: ${err.message}. Used offline fallback grading.)\n\n` + result.feedback;
+          }
+        } else {
+          result = gradeWithLocalFallback(activeAssign, studentAnswerText);
+        }
+
+        const subId = 'sub-' + Date.now();
+        let answerPdfFileId = '';
+        if (studentPdfBase64) {
+          answerPdfFileId = `file-ans-${subId}`;
+          await savePdfToCloudStorage(answerPdfFileId, window.appState.currentPdfFileName || 'answer_sheet.pdf', studentPdfBase64);
+        }
+
+        const newSubmission = {
+          id: subId,
+          assignmentId: activeAssign.id,
+          assignmentTitle: activeAssign.title,
+          targetGroup: activeAssign.targetGroup || 'ALL',
+          studentId: window.appState.currentUser.id,
+          studentName: window.appState.currentUser.name,
+          fileName: window.appState.currentPdfFileName || 'answer_sheet.pdf',
+          answerPdfFileId,
+          extractedText: studentAnswerText,
+          score: result.score,
+          totalMarks: activeAssign.totalMarks,
+          feedback: result.feedback,
+          gradingMode: result.mode,
+          submittedAt: new Date().toLocaleString(),
+          createdAt: Date.now()
+        };
+
+        window.appState.submissions.unshift(newSubmission);
+        localStorage.setItem('gf_submissions', JSON.stringify(window.appState.submissions));
+
+        if (window.appState.isCloudConnected && window.appState.cloudSaveDoc) {
+          await window.appState.cloudSaveDoc('gurumantra_submissions', newSubmission.id, newSubmission);
+        }
+
+        document.getElementById('pdf-preview-container').classList.add('hidden');
+        document.getElementById('student-pdf-input').value = '';
+        window.appState.currentStudentPdfBase64 = '';
+        renderStudentPortal();
+        alert(`Submitted! AI Score: ${result.score} / ${activeAssign.totalMarks}`);
+      } finally {
+        btn.disabled = false;
+        btn.innerHTML = '<span>🚀 Submit PDF & Run AI Grading</span>';
+      }
+    }
+
+    // ==================== MULTIMODAL GEMINI AI PDF GRADING ====================
+    async function gradeWithGeminiApi(assignment, studentAnswerText, studentPdfBase64) {
+      const parts = [];
+
+      let instructionText = `You are an expert school teacher grading a student's PDF answer sheet.
+Assignment Title: ${assignment.title}
+Class / Subject Group: ${assignment.targetGroup || 'General'}
+Maximum Marks: ${assignment.totalMarks}
+
+Questions / Notes:
+${assignment.questions || 'See attached Question Paper PDF.'}
+
+Teacher's Marking Scheme / Rubric Notes:
+${assignment.rubric || 'See attached Marking Scheme PDF.'}
+`;
+
+      const qPdfBase64 = await fetchPdfBase64(assignment.questionPdfFileId, assignment.questionPdfBase64);
+      if (qPdfBase64) {
+        instructionText += `\n[Attachment 1 is the Teacher's Question Paper PDF]`;
+        parts.push({ inlineData: { mimeType: 'application/pdf', data: qPdfBase64 } });
+      }
+
+      const rPdfBase64 = await fetchPdfBase64(assignment.rubricPdfFileId, assignment.rubricPdfBase64);
+      if (rPdfBase64) {
+        instructionText += `\n[The next PDF attachment is the Teacher's Official Marking Scheme / Answer Key PDF]`;
+        parts.push({ inlineData: { mimeType: 'application/pdf', data: rPdfBase64 } });
+      }
+
+      if (studentPdfBase64) {
+        instructionText += `\n[The final PDF attachment is the Student's Submitted Answer Sheet PDF — read all pages carefully, including handwriting, diagrams, and equations]`;
+        parts.push({ inlineData: { mimeType: 'application/pdf', data: studentPdfBase64 } });
+      } else {
+        instructionText += `\nStudent's Extracted Answer Text:\n${studentAnswerText}`;
+      }
+
+      instructionText += `\n\nEvaluate the student's answers strictly against the questions and marking scheme. Respond strictly in JSON format with two keys:
+{
+  "score": <number between 0 and ${assignment.totalMarks}>,
+  "feedback": "<clear question-by-question breakdown, marks awarded per question, strengths, and areas to improve>"
+}`;
+
+      parts.unshift({ text: instructionText });
+
+      const response = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/gemini-3.8-flash:generateContent?key=${encodeURIComponent(window.appState.geminiApiKey)}`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          contents: [{ parts }],
+          generationConfig: { responseMimeType: 'application/json' }
+        })
+      });
+
+      if (!response.ok) {
+        const errData = await response.json().catch(() => ({}));
+        throw new Error(errData.error?.message || `HTTP ${response.status}`);
+      }
+
+      const data = await response.json();
+      const rawText = data.candidates?.[0]?.content?.parts?.[0]?.text || '{}';
+      const parsed = JSON.parse(rawText);
+      return {
+        score: Math.min(assignment.totalMarks, Math.max(0, Number(parsed.score) || 0)),
+        feedback: parsed.feedback || 'Evaluated by Gemini AI.',
+        mode: 'Gemini 3.8 Flash Multimodal PDF AI'
+      };
+    }
+
+    function gradeWithLocalFallback(assignment, studentAnswer) {
+      const rubricWords = (assignment.rubric || '').toLowerCase().match(/\b[a-z]{4,}\b/g) || [];
+      const uniqueKeywords = [...new Set(rubricWords)];
+      const answerLower = (studentAnswer || '').toLowerCase();
+      let matched = 0;
+      uniqueKeywords.forEach(kw => { if (answerLower.includes(kw)) matched++; });
+
+      const ratio = uniqueKeywords.length > 0 ? Math.min(1, (matched / uniqueKeywords.length) * 1.35) : 0.7;
+      const estimatedScore = Math.round(assignment.totalMarks * ratio);
+
+      return {
+        score: estimatedScore,
+        feedback: `• Keyword & Concept Match: Matched ${matched} of ${uniqueKeywords.length} key rubric concepts.\n• Estimated Score: ${estimatedScore}/${assignment.totalMarks}.\n• Tip: Ensure your Google Gemini API key is configured in Settings for direct multimodal PDF reading.`,
+        mode: 'Offline Rubric Estimator'
+      };
+    }
+
+    function toggleSettingsModal(show) {
+      document.getElementById('settings-modal').classList.toggle('hidden', !show);
+    }
+
+    function saveSettings() {
+      window.appState.geminiApiKey = document.getElementById('input-gemini-key').value.trim();
+      window.appState.firebaseConfigStr = document.getElementById('input-firebase-config').value.trim();
+      localStorage.setItem('gf_gemini_key', window.appState.geminiApiKey);
+      localStorage.setItem('gf_firebase_config', window.appState.firebaseConfigStr);
+      toggleSettingsModal(false);
+      if (window.initCloudSync) window.initCloudSync();
+      alert('Settings saved! Reconnecting cloud sync...');
+    }
+
+    function copyStudentMagicLink() {
+      let baseUrl = window.location.origin + window.location.pathname;
+      if (window.appState.firebaseConfigStr || window.appState.geminiApiKey) {
+        try {
+          let fbObj = null;
+          if (window.appState.firebaseConfigStr) {
+            let cleaned = window.appState.firebaseConfigStr.trim()
+              .replace(/^const\s+\w+\s*=\s*/, '')
+              .replace(/;$/, '')
+              .replace(/([{,]\s*)([a-zA-Z0-9_]+)\s*:/g, '$1"$2":')
+              .replace(/'/g, '"');
+            fbObj = JSON.parse(cleaned);
+          }
+          const payload = btoa(JSON.stringify({ fb: fbObj, gk: window.appState.geminiApiKey }));
+          baseUrl += `#cfg=${encodeURIComponent(payload)}`;
+        } catch (e) {
+          console.warn('Could not encode config into link:', e);
+        }
+      }
+      navigator.clipboard.writeText(baseUrl).then(() => {
+        alert('Portal Link Copied!\n\nSend this exact link to your students and co-teachers via WhatsApp (or open it on your own second device). It automatically connects their browser to your Firebase cloud database & AI grader.');
+      });
+    }
+
+    function exportClassroomData() {
+      const payload = {
+        groups: window.appState.groups,
+        users: window.appState.users,
+        assignments: window.appState.assignments,
+        submissions: window.appState.submissions,
+        chatMessages: window.appState.chatMessages,
+        exportedAt: new Date().toISOString()
+      };
+      const blob = new Blob([JSON.stringify(payload, null, 2)], { type: 'application/json' });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = `Gurumantra_Backup_${new Date().toISOString().slice(0, 10)}.json`;
+      a.click();
+      URL.revokeObjectURL(url);
+    }
+
+    function updateSyncUI(connected, errorMsg = '') {
+      const badge = document.getElementById('sync-status-badge');
+      const banner = document.getElementById('setup-warning-banner');
+      const loginWarn = document.getElementById('login-local-warning');
+      if (connected) {
+        badge.textContent = '🟢 Live Cloud';
+        badge.className = 'w-fit text-[10px] sm:text-xs font-semibold px-2 py-0.5 rounded-full bg-emerald-50 text-emerald-700 border border-emerald-200';
+        if (loginWarn) loginWarn.classList.add('hidden');
+      } else {
+        badge.textContent = errorMsg ? '⚠️ Config Error' : 'Local Mode';
+        badge.className = 'w-fit text-[10px] sm:text-xs font-semibold px-2 py-0.5 rounded-full bg-amber-50 text-amber-700 border border-amber-200';
+        if (loginWarn) loginWarn.classList.remove('hidden');
+      }
+      if (banner) {
+        banner.classList.toggle('hidden', connected && Boolean(window.appState.geminiApiKey));
+      }
+    }
+
+    function refreshActiveViews() {
+      if (!window.appState.currentUser) return;
+      if (window.appState.currentUser.role === 'teacher') {
+        populateAllGroupDropdowns();
+        renderTeacherDashboard();
+        renderGroupsManager();
+        renderUsersDirectory();
+        renderTeacherLiveStatus();
+        renderChatMessages('teacher');
+      } else {
+        renderStudentPortal();
+        renderStudentLiveBanner();
+        renderChatMessages('student');
+      }
+      updatePresenceDisplays();
+    }
+
+    // Boot UI immediately
+    (function initUI() {
+      if (!localStorage.getItem('gf_groups')) {
+        localStorage.setItem('gf_groups', JSON.stringify(window.appState.groups));
+      }
+      if (!localStorage.getItem('gf_users')) {
+        localStorage.setItem('gf_users', JSON.stringify(window.appState.users));
+      }
+      if (!localStorage.getItem('gf_assignments')) {
+        localStorage.setItem('gf_assignments', JSON.stringify(window.appState.assignments));
+      }
+      document.getElementById('input-gemini-key').value = window.appState.geminiApiKey;
+      document.getElementById('input-firebase-config').value = window.appState.firebaseConfigStr;
+
+      if (window.appState.currentUser) {
+        showPortalForUser(window.appState.currentUser);
+      } else {
+        switchLoginRole('student');
+        updateSyncUI(false);
+      }
+    })();
+  </script>
+
+  <!-- ==================== FIREBASE CLOUD SYNC MODULE (ISOLATED) ==================== -->
+  <script type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.14.1/firebase-app.js";
+    import { getFirestore, collection, doc, getDoc, setDoc, deleteDoc, onSnapshot } from "https://www.gstatic.com/firebasejs/10.14.1/firebase-firestore.js";
+
+    window.initCloudSync = async function() {
+      const cfgStr = window.appState.firebaseConfigStr;
+      if (!cfgStr) {
+        updateSyncUI(false);
+        return;
+      }
+      try {
+        let cleaned = cfgStr.trim()
+          .replace(/^const\s+\w+\s*=\s*/, '')
+          .replace(/;$/, '')
+          .replace(/([{,]\s*)([a-zA-Z0-9_]+)\s*:/g, '$1"$2":')
+          .replace(/'/g, '"');
+        const configObj = JSON.parse(cleaned);
+        const app = initializeApp(configObj);
+        const db = getFirestore(app);
+
+        window.appState.cloudSaveDoc = (colName, docId, data) => setDoc(doc(db, colName, docId), data);
+        window.appState.cloudGetDoc = async (colName, docId) => {
+          const snap = await getDoc(doc(db, colName, docId));
+          return snap.exists() ? snap.data() : null;
+        };
+        window.appState.cloudDeleteDoc = (colName, docId) => deleteDoc(doc(db, colName, docId));
+
+        onSnapshot(collection(db, 'gurumantra_presence'), (snapshot) => {
+          const map = {};
+          snapshot.forEach(docSnap => {
+            map[docSnap.id] = docSnap.data();
+          });
+          window.appState.presenceMap = map;
+          localStorage.setItem('gf_presence', JSON.stringify(map));
+          updatePresenceDisplays();
+        });
+
+        onSnapshot(collection(db, 'gurumantra_groups'), (snapshot) => {
+          const cloudGroups = [];
+          snapshot.forEach(docSnap => cloudGroups.push(docSnap.data()));
+          if (cloudGroups.length > 0) {
+            window.appState.groups = cloudGroups;
+            localStorage.setItem('gf_groups', JSON.stringify(cloudGroups));
+          } else {
+            window.appState.groups.forEach(g => setDoc(doc(db, 'gurumantra_groups', g.id), g));
+          }
+          refreshActiveViews();
+        });
+
+        onSnapshot(collection(db, 'gurumantra_users'), (snapshot) => {
+          const cloudUsers = [];
+          snapshot.forEach(docSnap => cloudUsers.push(docSnap.data()));
+          if (cloudUsers.length > 0) {
+            cloudUsers.sort((a, b) => a.id.localeCompare(b.id));
+            window.appState.users = cloudUsers;
+            localStorage.setItem('gf_users', JSON.stringify(cloudUsers));
+          } else {
+            window.appState.users.forEach(u => setDoc(doc(db, 'gurumantra_users', u.id), u));
+          }
+          refreshActiveViews();
+        });
+
+        onSnapshot(collection(db, 'gurumantra_assignments'), (snapshot) => {
+          const cloudAssigns = [];
+          snapshot.forEach(docSnap => cloudAssigns.push(docSnap.data()));
+          if (cloudAssigns.length > 0) {
+            cloudAssigns.sort((a, b) => (b.createdAt || 0) - (a.createdAt || 0));
+            window.appState.assignments = cloudAssigns;
+            localStorage.setItem('gf_assignments', JSON.stringify(cloudAssigns));
+          } else if (window.appState.currentUser?.role === 'teacher') {
+            window.appState.assignments.forEach(a => setDoc(doc(db, 'gurumantra_assignments', a.id), a));
+          }
+          refreshActiveViews();
+        });
+
+        onSnapshot(collection(db, 'gurumantra_submissions'), (snapshot) => {
+          const cloudSubs = [];
+          snapshot.forEach(docSnap => cloudSubs.push(docSnap.data()));
+          cloudSubs.sort((a, b) => (b.createdAt || 0) - (a.createdAt || 0));
+          window.appState.submissions = cloudSubs;
+          localStorage.setItem('gf_submissions', JSON.stringify(cloudSubs));
+          refreshActiveViews();
+        });
+
+        onSnapshot(collection(db, 'gurumantra_chat'), (snapshot) => {
+          const cloudMsgs = [];
+          snapshot.forEach(docSnap => cloudMsgs.push(docSnap.data()));
+          cloudMsgs.sort((a, b) => (a.createdAt || 0) - (b.createdAt || 0));
+          window.appState.chatMessages = cloudMsgs;
+          localStorage.setItem('gf_chat', JSON.stringify(cloudMsgs));
+          refreshActiveViews();
+        });
+
+        onSnapshot(collection(db, 'gurumantra_live'), (snapshot) => {
+          let activeDoc = null;
+          snapshot.forEach(docSnap => {
+            if (docSnap.id === 'current_live' && docSnap.data().active) {
+              activeDoc = docSnap.data();
+            }
+          });
+          window.appState.liveSession = activeDoc;
+          if (activeDoc) localStorage.setItem('gf_live_session', JSON.stringify(activeDoc));
+          else localStorage.removeItem('gf_live_session');
+          refreshActiveViews();
+        });
+
+        window.appState.isCloudConnected = true;
+        updateSyncUI(true);
+        if (window.appState.currentUser) {
+          publishUserPresence(true);
+        }
+      } catch (err) {
+        console.error('Firebase init failed:', err);
+        window.appState.isCloudConnected = false;
+        updateSyncUI(false, err.message);
+      }
+    };
+
+    window.initCloudSync();
+  </script>
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('./sw.js').catch((err) => console.warn('SW registration:', err));
+      });
+    }
+  </script>
+</body>
+</html>
