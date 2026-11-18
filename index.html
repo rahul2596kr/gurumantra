@@ -45,6 +45,13 @@
         </div>
       </div>
 
+      <!-- Top-Right Login Mode Toggle (Shown on Login Screen) -->
+      <div id="nav-login-controls" class="flex items-center gap-2 shrink-0">
+        <button id="btn-top-teacher-login" type="button" onclick="toggleTopRoleLogin()" class="text-xs sm:text-sm font-bold px-3 sm:px-3.5 py-2 rounded-xl bg-slate-100 hover:bg-indigo-50 text-slate-700 hover:text-indigo-700 border border-slate-200 hover:border-indigo-200 transition flex items-center gap-1.5 cursor-pointer">
+          <span>👨‍🏫</span> <span>Teacher Login</span>
+        </button>
+      </div>
+
       <!-- Navigation Actions (Shown when logged in) -->
       <div id="nav-user-controls" class="hidden flex items-center gap-1.5 sm:gap-3 shrink-0">
         <button id="btn-open-settings" type="button" onclick="toggleSettingsModal(true)" class="hidden text-xs sm:text-sm font-semibold p-2 sm:px-3 sm:py-2 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-700 transition flex items-center gap-1.5" title="Cloud & AI Settings">
@@ -85,18 +92,8 @@
       <div class="bg-white rounded-2xl shadow-xl border border-slate-200 overflow-hidden">
         <div class="bg-gradient-to-r from-indigo-600 to-violet-600 px-5 py-6 text-white text-center">
           <img src="data:image/png;base64,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" alt="Guru Mantra" class="w-16 h-16 mx-auto mb-2.5 rounded-2xl bg-white p-1 shadow-md object-contain" />
-          <h1 class="text-xl sm:text-2xl font-extrabold tracking-tight">Gurumantra Online</h1>
-          <p class="text-indigo-100 text-xs sm:text-sm mt-1">Assignments, Live Video Classes & Doubt Chat</p>
-        </div>
-
-        <!-- Role Toggle Tabs -->
-        <div class="grid grid-cols-2 border-b border-slate-200 bg-slate-50 p-1.5 gap-1.5">
-          <button id="tab-student-login" type="button" onclick="switchLoginRole('student')" class="py-2.5 text-xs sm:text-sm font-bold rounded-xl bg-white text-indigo-600 shadow-sm border border-slate-200 transition cursor-pointer">
-            🎓 Student Login
-          </button>
-          <button id="tab-teacher-login" type="button" onclick="switchLoginRole('teacher')" class="py-2.5 text-xs sm:text-sm font-bold rounded-xl text-slate-600 hover:text-slate-900 transition cursor-pointer">
-            👨‍🏫 Teacher Login
-          </button>
+          <h1 id="login-card-title" class="text-xl sm:text-2xl font-extrabold tracking-tight">Student Portal Login</h1>
+          <p id="login-card-subtitle" class="text-indigo-100 text-xs sm:text-sm mt-1">Assignments, Live Video Classes & Doubt Chat</p>
         </div>
 
         <form id="login-form" onsubmit="handleLogin(event)" class="p-5 sm:p-6 space-y-4">
@@ -108,28 +105,28 @@
 
           <div>
             <label id="label-user-id" class="block text-xs font-bold uppercase tracking-wider text-slate-600 mb-1">Student Roll / ID</label>
-            <input id="input-user-id" type="text" required placeholder="e.g. STU-1001"
+            <input id="input-user-id" type="text" required placeholder="Enter Student ID"
               class="w-full px-3.5 py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 outline-none text-base sm:text-sm font-medium" />
           </div>
 
           <div>
             <label class="block text-xs font-bold uppercase tracking-wider text-slate-600 mb-1">Institutional Email</label>
-            <input id="input-user-email" type="email" required placeholder="e.g. student1@school.edu"
+            <input id="input-user-email" type="email" required placeholder="Enter Institutional Email"
               class="w-full px-3.5 py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 outline-none text-base sm:text-sm font-medium" />
           </div>
 
           <div>
             <label class="block text-xs font-bold uppercase tracking-wider text-slate-600 mb-1">Password</label>
-            <input id="input-user-password" type="password" required placeholder="••••••••"
+            <input id="input-user-password" type="password" required placeholder="Enter Password"
               class="w-full px-3.5 py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 outline-none text-base sm:text-sm font-medium" />
           </div>
 
-          <button type="submit" class="w-full py-3.5 rounded-xl bg-indigo-600 hover:bg-indigo-700 text-white font-bold text-sm shadow-md shadow-indigo-200 transition cursor-pointer">
-            Sign In to Portal →
+          <button id="btn-login-submit" type="submit" class="w-full py-3.5 rounded-xl bg-indigo-600 hover:bg-indigo-700 text-white font-bold text-sm shadow-md shadow-indigo-200 transition cursor-pointer">
+            Sign In to Student Portal →
           </button>
 
           <p class="text-[11px] text-center text-slate-400 pt-1">
-            Enter your assigned Roll/Faculty ID, Email, and Password provided by your instructor.
+            Enter your assigned ID, Email, and Password provided by your instructor.
           </p>
         </form>
       </div>
@@ -1159,27 +1156,44 @@
     }
 
     // ==================== AUTHENTICATION ====================
+    function toggleTopRoleLogin() {
+      const nextRole = window.appState.loginRole === 'teacher' ? 'student' : 'teacher';
+      switchLoginRole(nextRole);
+    }
+
     function switchLoginRole(role) {
       window.appState.loginRole = role;
       document.getElementById('login-error').classList.add('hidden');
-      const tabStu = document.getElementById('tab-student-login');
-      const tabTch = document.getElementById('tab-teacher-login');
+      const topBtn = document.getElementById('btn-top-teacher-login');
+      const cardTitle = document.getElementById('login-card-title');
+      const cardSubtitle = document.getElementById('login-card-subtitle');
       const labelId = document.getElementById('label-user-id');
       const inputId = document.getElementById('input-user-id');
       const inputEmail = document.getElementById('input-user-email');
+      const submitBtn = document.getElementById('btn-login-submit');
 
       if (role === 'student') {
-        tabStu.className = 'py-2.5 text-xs sm:text-sm font-bold rounded-xl bg-white text-indigo-600 shadow-sm border border-slate-200 transition cursor-pointer';
-        tabTch.className = 'py-2.5 text-xs sm:text-sm font-bold rounded-xl text-slate-600 hover:text-slate-900 transition cursor-pointer';
+        if (topBtn) {
+          topBtn.innerHTML = '<span>👨‍🏫</span> <span>Teacher Login</span>';
+          topBtn.className = 'text-xs sm:text-sm font-bold px-3 sm:px-3.5 py-2 rounded-xl bg-slate-100 hover:bg-indigo-50 text-slate-700 hover:text-indigo-700 border border-slate-200 hover:border-indigo-200 transition flex items-center gap-1.5 cursor-pointer';
+        }
+        if (cardTitle) cardTitle.textContent = 'Student Portal Login';
+        if (cardSubtitle) cardSubtitle.textContent = 'Assignments, Live Video Classes & Doubt Chat';
         labelId.textContent = 'Student Roll / ID';
-        inputId.placeholder = 'e.g. STU-1001';
-        inputEmail.placeholder = 'e.g. student1@school.edu';
+        inputId.placeholder = 'Enter Student ID';
+        inputEmail.placeholder = 'Enter Institutional Email';
+        if (submitBtn) submitBtn.textContent = 'Sign In to Student Portal →';
       } else {
-        tabTch.className = 'py-2.5 text-xs sm:text-sm font-bold rounded-xl bg-white text-indigo-600 shadow-sm border border-slate-200 transition cursor-pointer';
-        tabStu.className = 'py-2.5 text-xs sm:text-sm font-bold rounded-xl text-slate-600 hover:text-slate-900 transition cursor-pointer';
+        if (topBtn) {
+          topBtn.innerHTML = '<span>🎓</span> <span>Student Login</span>';
+          topBtn.className = 'text-xs sm:text-sm font-bold px-3 sm:px-3.5 py-2 rounded-xl bg-indigo-600 hover:bg-indigo-700 text-white shadow-sm transition flex items-center gap-1.5 cursor-pointer';
+        }
+        if (cardTitle) cardTitle.textContent = 'Teacher & Admin Login';
+        if (cardSubtitle) cardSubtitle.textContent = 'Manage Classes, Assignments, Live Sessions & Grades';
         labelId.textContent = 'Faculty / Staff ID';
-        inputId.placeholder = 'e.g. TCH-2026';
-        inputEmail.placeholder = 'e.g. rahul.gupta@school.edu';
+        inputId.placeholder = 'Enter Faculty / Staff ID';
+        inputEmail.placeholder = 'Enter Faculty Email';
+        if (submitBtn) submitBtn.textContent = 'Sign In to Teacher Portal →';
       }
     }
 
@@ -1211,6 +1225,7 @@
 
     function showPortalForUser(user) {
       document.getElementById('view-login').classList.add('hidden');
+      document.getElementById('nav-login-controls')?.classList.add('hidden');
       document.getElementById('nav-user-controls').classList.remove('hidden');
       document.getElementById('user-display-name').textContent = user.name;
       document.getElementById('user-display-role').textContent = `${user.id}`;
@@ -1253,9 +1268,11 @@
       window.appState.currentUser = null;
       sessionStorage.removeItem('gf_user');
       document.getElementById('nav-user-controls').classList.add('hidden');
+      document.getElementById('nav-login-controls')?.classList.remove('hidden');
       document.getElementById('view-teacher').classList.add('hidden');
       document.getElementById('view-student').classList.add('hidden');
       document.getElementById('view-login').classList.remove('hidden');
+      switchLoginRole('student');
       document.getElementById('input-user-password').value = '';
     }
 
